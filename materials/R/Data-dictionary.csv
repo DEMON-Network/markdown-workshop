@@ -1,0 +1,16 @@
+Variable name,Variable description,Variable structure,Factor levels
+Subject.ID,Subject ID,factor,
+MRI.ID,MRI ID for subject,factor,
+Group,"Indicates whether a person had dementia at the time of entry into the study; converted to dementia or did not show dementia during the study period",factor,"Converted; Demented; Nondemented"
+Visit,Visit number,count,
+MR.Delay,Delay between MR imaging and other assessments,integer,
+M.F,Sex,factor,"M; F"
+Hand,Handedness,factor,"R; L"
+Age,Age at time of image acquisition (years),integer,
+EDUC,Years of education,integer,
+SES,Socioeconomic status as assessed by the Hollingshead Index of Social Position and classified into categories from 1 (highest status) to 5 (lowest status) (Hollingshead 1957),count,
+MMSE,Mini-Mental State Examination score (range is from 0 = worst to 30 = best) (Folstein Folstein & McHugh 1975),count,
+CDR,"Clinical Dementia Rating (0 = no dementia; 0.5 = very mild AD; 1 = mild AD; 2 = moderate AD) (Morris 1993)",factor,"0;0.5;1;2"
+eTIV,Estimated total intracranial volume (cm3) (Buckner et al. 2004),integer,
+nWBV,Normalized whole-brain volume expressed as a percent of all voxels in the atlas-masked image that are labeled as gray or white matter by the automated tissue segmentation process (Fotenos et al. 2005),integer,
+ASF,Atlas scaling factor (unitless). Computed scaling factor that transforms native-space brain and skull to the atlas target (i.e. the determinant of the transform matrix) (Buckner et al. 2004),integer,
