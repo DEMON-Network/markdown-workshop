@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Literate programming, Markdown &amp; Colab &#8212; Reproducible reporting using markdown</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="{.tabset}" href="R_analysis.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Reproducible reporting using markdown</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  R
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_Instructions.html">
+   Pre-workshop instructions for R users
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_intro.html">
+   Literate programming and RMarkdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_analysis.html">
+   {.tabset}
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Literate programming, Markdown &amp; Colab
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/oasis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/oasis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Literate programming, Markdown &amp; Colab
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markdown-colaboratory-further-reading">
+     Markdown Colaboratory further reading
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markdown-what-is-it">
+     Markdown - what is it?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markdown-what-s-it-good-for">
+     Markdown -  what’s it good for?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#conventional-workflow">
+       1. Conventional workflow
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#literate-programming-workflow">
+       2. Literate programming workflow
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#goals-for-this-episode">
+     Goals for this episode
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notebooks-depend-on-kernels">
+   Notebooks depend on kernels
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis-is-contained-within-notebooks">
+   Analysis is contained within notebooks
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-a-new-python-project-using-colab">
+     Setting up a new
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Python
+      </span>
+     </code>
+     project using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Colab
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-new-colab-notebook">
+     Create a new
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       Colab
+      </span>
+     </code>
+     notebook
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-on-a-specific-folder-in-drive">
+     Working on a specific folder in drive
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-ipython-magic-commands">
+     Use Ipython magic commands
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#save-the-data-in-the-newly-created-folder">
+     Save the data in the newly created folder
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notebooks-make-analysis-easier">
+     Notebooks make analysis easier
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#starting-where-you-left-off">
+     Starting where you left off
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colab-is-memoryless">
+     Colab is memoryless
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#now-if-you-reset-your-runtime-the-results-will-be-the-same-every-time">
+       Now if you reset your runtime the results will be the same every time
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generate-pdf-reports-from-a-notebook">
+     Generate pdf reports from a notebook
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-you-have-the-ability-to-export-your-notebook-as-a-pdf-report">
+     Now you have the ability to export your notebook as a pdf report
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="literate-programming-markdown-colab">
+<h1>Literate programming, Markdown &amp; Colab<a class="headerlink" href="#literate-programming-markdown-colab" title="Permalink to this headline">¶</a></h1>
+<p>Let’s start with the definition of literate programming (from Wikipedia):</p>
+<blockquote>
+<div><p><em>Literate programming is a programming paradigm introduced by Donald Knuth in which a computer program is given an explanation of its logic in a natural language, such as English, interspersed with snippets of macros and traditional source code, from which compilable source code can be generated.</em></p>
+</div></blockquote>
+<p>Jupyter notebook is a method for performing literate programming and is a powerful way of presenting your analysis in a way that’s easy to code and easy to read. The “snippets of source code” are your Python syntax. The “explanation of the its logic in a natural language” is your analysis report.</p>
+<p>This lesson will draw heavily from the following excellent resources:</p>
+<div class="section" id="markdown-colaboratory-further-reading">
+<h2>Markdown Colaboratory further reading<a class="headerlink" href="#markdown-colaboratory-further-reading" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://colab.research.google.com/notebooks/intro.ipynb?utm_source=scs-index">Welcome To Colaboratory</a> - An extensive tutorial</p></li>
+<li><p><a class="reference external" href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">Reference (pdf)</a> - A 5 page reference of commands and concepts.</p></li>
+<li><p><a class="reference external" href="https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">Cheatsheet (pdf)</a> - A 2 page summary of the most important elements.
+{: .callout}</p></li>
+</ul>
+</div>
+<div class="section" id="markdown-what-is-it">
+<h2>Markdown - what is it?<a class="headerlink" href="#markdown-what-is-it" title="Permalink to this headline">¶</a></h2>
+<p><strong>Markdown</strong> is a simple plain-text language that can be turned into formatted text, e.g., webpages, forum posts (stackexchange, Github) etc.</p>
+<p><strong>Markdown</strong> allows you to incorporate code  within the
+final document. It can be turned into HTML, pdfs, word documents, books, theses etc. as well.</p>
+<p>The Carpentries courses (i.e., this course) are written using <code class="docutils literal notranslate"><span class="pre">Markdown</span></code>.</p>
+</div>
+<div class="section" id="markdown-what-s-it-good-for">
+<h2>Markdown -  what’s it good for?<a class="headerlink" href="#markdown-what-s-it-good-for" title="Permalink to this headline">¶</a></h2>
+<p>Consider your normal data analysis workflow. It’s probably something like this:</p>
+<div class="section" id="conventional-workflow">
+<h3>1. Conventional workflow<a class="headerlink" href="#conventional-workflow" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Do some data analysis in an <code class="docutils literal notranslate"><span class="pre">python</span></code> script. Use comments to help reader understand.</p></li>
+<li><p>Save plots, tables, etc. in separate files (<code class="docutils literal notranslate"><span class="pre">fig1.png</span></code>, <code class="docutils literal notranslate"><span class="pre">tab1.csv</span></code>, etc.).</p></li>
+<li><p>Write report in Word and insert figures, tables etc.</p></li>
+</ol>
+<p><em>Updating/changing analysis</em>: Edit <code class="docutils literal notranslate"><span class="pre">python</span></code> scripts, Word document, insert figures, potentially change figure lables, <code class="docutils literal notranslate"><span class="pre">fig1.png</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">fig2.png</span></code> etc..</p>
+<p><em>Sharing analysis</em>: Share data, R scripts, plots, tables, Word/Latex files. Also include how all the parts relate to each other in a README.</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">Colab</span></code> your workflow will be more like this:</p>
+</div>
+<div class="section" id="literate-programming-workflow">
+<h3>2. Literate programming workflow<a class="headerlink" href="#literate-programming-workflow" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Do some data analysis in an <code class="docutils literal notranslate"><span class="pre">Colab</span></code> Notebook. All figures, tables are displayed in line - no need to save sepate files.</p></li>
+<li><p>Write your report around the code in the <code class="docutils literal notranslate"><span class="pre">Colab</span></code> file. The narrative of the analysis helps the reader understand the code.</p></li>
+<li><p>One-click to create formatted Word/HTML/pdf report, or, one-click to publish to the web (requires setup - not covered in this course).</p></li>
+</ol>
+<p><em>Updating/changing analysis</em>: Edit the single <code class="docutils literal notranslate"><span class="pre">Colab</span></code> file and click to create report.</p>
+<p><em>Sharing analysis</em>: Share data and the single <code class="docutils literal notranslate"><span class="pre">Colab</span></code> file.</p>
+<p>This difference can be seen in the figure below which shows two directory structures the top
+with the conventional workflow, the bottom with the literate programming workflow.</p>
+<!-- ![comparison](../fig/literate_vs_conventional.png) -->
+<p>Of course for larger projects, you may have more than one <code class="docutils literal notranslate"><span class="pre">Colab</span></code> file and you may have separate analysis scripts as well.</p>
+</div>
+</div>
+<div class="section" id="goals-for-this-episode">
+<h2>Goals for this episode<a class="headerlink" href="#goals-for-this-episode" title="Permalink to this headline">¶</a></h2>
+<p>This episode will familiarise you with all the main features of working with either <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Lab</span></code> or <code class="docutils literal notranslate"><span class="pre">Colab</span></code>.
+We will be demonstrating the following features:</p>
+<ol class="simple">
+<li><p>Organising analysis into <code class="docutils literal notranslate"><span class="pre">Notebooks</span></code>;</p></li>
+<li><p>Tools for writing and running Python code;</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="notebooks-depend-on-kernels">
+<h1>Notebooks depend on kernels<a class="headerlink" href="#notebooks-depend-on-kernels" title="Permalink to this headline">¶</a></h1>
+<p>If you’re using Jupyter Lab locally or from a host provider, kernels are a big issue because it allows you to use the same notebook infrastructure across different programming languages (e.g. R, Python, Bash, Javascript etc).
+At the moment, Colab does not support these capabilities and only supports Python.</p>
+</div>
+<div class="section" id="analysis-is-contained-within-notebooks">
+<h1>Analysis is contained within notebooks<a class="headerlink" href="#analysis-is-contained-within-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">notebook</span></code> keeps track of settings tied to a particular data analysis project. <br>
+A <code class="docutils literal notranslate"><span class="pre">notebook</span></code> consists of a list of cells containing either explanatory text or executable code with its output. <br>
+A folder hierarchy is common when starting a new project, which contains all the relevant data for others to replicate your work.<br>
+When creating notebooks, it is good practice to use consistent naming conventions so that different information can be included, such as the topic of analysis, the date of creation, and the notebook creator.<br>
+You can keep working on your project by just opening up the relevant Jupyter notebook in the corresponding Folder.</p>
+<div class="section" id="setting-up-a-new-python-project-using-colab">
+<h2>Setting up a new <code class="docutils literal notranslate"><span class="pre">Python</span></code> project using <code class="docutils literal notranslate"><span class="pre">Colab</span></code><a class="headerlink" href="#setting-up-a-new-python-project-using-colab" title="Permalink to this headline">¶</a></h2>
+<p>For your first project please complete the exercise below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://www.oasis-brains.org/pdf/oasis_longitudinal.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-a-new-colab-notebook">
+<h2>Create a new <code class="docutils literal notranslate"><span class="pre">Colab</span></code> notebook<a class="headerlink" href="#create-a-new-colab-notebook" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Just click <a class="reference external" href="https://colab.research.google.com/#create=true">here</a> to spawn a new Jupyter notebook in Colab</p></li>
+<li><p>Change the notebook name at the top to <code class="docutils literal notranslate"><span class="pre">oasis.ipynb</span></code></p></li>
+<li><p>Add the following code to upload the packages we will be using today</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+    <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Download the dataset we will be working by entering the following code in the top cell</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://www.oasis-brains.org/pdf/oasis_longitudinal.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="working-on-a-specific-folder-in-drive">
+<h2>Working on a specific folder in drive<a class="headerlink" href="#working-on-a-specific-folder-in-drive" title="Permalink to this headline">¶</a></h2>
+<p>The following step is technically not necessary if you intend to use Colab right away. <br>
+However, since Colab is storing its work on your hard drive, it would be a good idea to specify which folder it will be using. <br>
+You would create a folder in your drive and then use the new button to spawn the Colab notebook inside that folder.<br></p>
+<p>Mount your drive in the Colab container.
+The following code can also be used to mount your entire drive so it is accessible from your notebook (this requires a gmail account and your approval).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/gdrive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/gdrive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/gdrive
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="use-ipython-magic-commands">
+<h2>Use Ipython magic commands<a class="headerlink" href="#use-ipython-magic-commands" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Magic commands (initiated with <em>%%</em>) in a notebook can be used to accomplish a variety of tasks.</p></li>
+<li><p>In this example, a shell cell will create a folder on our local Google drive and move our new Colab  notebook into it.</p></li>
+<li><p>You can learn more about magic commands by visiting <a class="reference external" href="https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.03-Magic-Commands.ipynb">link</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
+<span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">DEMON</span><span class="o">/</span>
+<span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">f</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">Colab</span>\ <span class="n">Notebooks</span><span class="o">/</span><span class="n">oasis</span><span class="o">.</span><span class="n">ipynb</span> <span class="p">];</span> <span class="n">then</span> 
+  <span class="n">mv</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">Colab</span>\ <span class="n">Notebooks</span><span class="o">/</span><span class="n">oasis</span><span class="o">.</span><span class="n">ipynb</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">DEMON</span><span class="o">/</span><span class="n">oasis</span><span class="o">.</span><span class="n">ipynb</span>
+<span class="n">fi</span>
+<span class="n">ls</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">DEMON</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>oasis.ipynb
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="save-the-data-in-the-newly-created-folder">
+<h2>Save the data in the newly created folder<a class="headerlink" href="#save-the-data-in-the-newly-created-folder" title="Permalink to this headline">¶</a></h2>
+<p>Once we have a local folder mounted in our virtual session we should also save the data.</p>
+<p>We start by changing our current working directory using the <code class="docutils literal notranslate"><span class="pre">%cd</span></code> magic command.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">cd</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">DEMON</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Then we will use the <code class="docutils literal notranslate"><span class="pre">to_csv</span></code> method to save the data localy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;oasis_raw.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">cd</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">DEMON</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/gdrive/MyDrive/DEMON
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;oasis_raw.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="notebooks-make-analysis-easier">
+<h2>Notebooks make analysis easier<a class="headerlink" href="#notebooks-make-analysis-easier" title="Permalink to this headline">¶</a></h2>
+<p>Among the advantages of a notebook is the ability to pick up an analysis from where you left off last time.
+These include the notebook kernel, variables made, packages imported, and commands executed.</p>
+<p>Let’s investigate this with the following two exercises:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-0.08409464, -0.52748811,  0.22402034,  1.91797563,  1.39013786,
+       -0.54965253,  0.71944841,  0.76520252, -1.16918544,  1.05141679])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="starting-where-you-left-off">
+<h2>Starting where you left off<a class="headerlink" href="#starting-where-you-left-off" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Go to your open notebook</p></li>
+<li><p>Ensure the top cell has all the packages you need available.</p></li>
+<li><p>Press the play button to launch the cell (or press shift+enter).</p></li>
+<li><p>Add the following to the empty cell below (or just copy and paste!):</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># Sample a vector of 10 numbers from the normal distribution</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+      <span class="n">total</span> <span class="o">+=</span> <span class="n">value</span>
+    <span class="n">total</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Rename the notebook <code class="docutils literal notranslate"><span class="pre">start_again.ipynb</span></code></p></li>
+<li><p>Close the browser tab</p></li>
+<li><p>Reopen the notebook</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">total</span></code> in a cell and run it - these should be recognised by the <code class="docutils literal notranslate"><span class="pre">Colab</span></code> interpreter and have the same value as before.</p></li>
+</ol>
+</div>
+<div class="section" id="colab-is-memoryless">
+<h2>Colab is memoryless<a class="headerlink" href="#colab-is-memoryless" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Importantly this only works as long as the notebook is on, i.e. the variables are stored in runtime memory.</p></li>
+<li><p>To emphasise this important issue let’s do another exercise</p></li>
+<li><p>In your colab tab open the Runtime menu and select <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">runtime</span></code></p></li>
+<li><p>Now rerun the cell which will now raise an error</p></li>
+<li><p>This is because the variables are no longer in memory.</p></li>
+<li><p>Furthermore if you open the Runtime menu and select <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">all</span></code> you will see that the results change</p></li>
+<li><p>This is because we are sampling random numbers from a different Generator instance (you can read more about this <a class="reference external" href="https://numpy.org/doc/stable/reference/random/generator.html">here</a></p></li>
+<li><p>For this problem, a better solution would be to construct a new Generator with 42 as a SeedSequence making sure that the sampling is identical</p></li>
+<li><p>See the following code:</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> 
+    <span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> 
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+      <span class="n">total</span> <span class="o">+=</span> <span class="n">value</span>
+    <span class="n">total</span>
+</pre></div>
+</div>
+<div class="section" id="now-if-you-reset-your-runtime-the-results-will-be-the-same-every-time">
+<h3>Now if you reset your runtime the results will be the same every time<a class="headerlink" href="#now-if-you-reset-your-runtime-the-results-will-be-the-same-every-time" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="generate-pdf-reports-from-a-notebook">
+<h2>Generate pdf reports from a notebook<a class="headerlink" href="#generate-pdf-reports-from-a-notebook" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>One of the goals of this session is to show how you can export your notebook to a PDF report</p></li>
+<li><p>To do this, you need to install some essential software on your virtual machine</p></li>
+<li><p>We will use the <code class="docutils literal notranslate"><span class="pre">%%capture</span></code> magic command to supress the cell output</p></li>
+<li><p>And use the <code class="docutils literal notranslate"><span class="pre">!</span></code> symbol to run bash line without the need to declare a bash cell</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%capture
+!apt update
+!apt install texlive-xetex texlive-fonts-recommended texlive-generic-recommended
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="now-you-have-the-ability-to-export-your-notebook-as-a-pdf-report">
+<h2>Now you have the ability to export your notebook as a pdf report<a class="headerlink" href="#now-you-have-the-ability-to-export-your-notebook-as-a-pdf-report" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!jupyter nbconvert oasis.ipynb --to pdf --output oasis.pdf
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[NbConvertApp] Converting notebook oasis.ipynb to pdf
+[NbConvertApp] Writing 39023 bytes to ./notebook.tex
+[NbConvertApp] Building PDF
+[NbConvertApp] Running xelatex 3 times: [u&#39;xelatex&#39;, u&#39;./notebook.tex&#39;, &#39;-quiet&#39;]
+[NbConvertApp] Running bibtex 1 time: [u&#39;bibtex&#39;, u&#39;./notebook&#39;]
+[NbConvertApp] WARNING | bibtex had problems, most likely because there were no citations
+[NbConvertApp] PDF successfully created
+[NbConvertApp] Writing 50427 bytes to oasis.pdf
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="R_analysis.html" title="previous page">{.tabset}</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By DEMON Network<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
