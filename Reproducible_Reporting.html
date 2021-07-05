@@ -1,0 +1,1384 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reproducible Reporting using Markdown - Python &#8212; Reproducible reporting using markdown</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Literate programming, Markdown &amp; Colab" href="oasis.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Reproducible reporting using markdown</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  R
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_Instructions.html">
+   Pre-workshop instructions for R users
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_intro.html">
+   Literate programming and RMarkdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_analysis.html">
+   R Worksheet
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="oasis.html">
+   Literate programming, Markdown &amp; Colab
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Reproducible Reporting using Markdown - Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Reproducible_Reporting.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/Reproducible_Reporting.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Reproducible Reporting using Markdown - Python
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setup">
+     Setup
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#import-packages">
+       Import packages
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#download-oasis-dataset">
+       Download OASIS Dataset
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-processing-the-data">
+     Pre-processing the Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dementia-status-from-cdr">
+       Dementia Status from CDR
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variable-types">
+       Variable Types
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#convert-categorical-data">
+       Convert Categorical Data
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#visits">
+       Visits
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-exploration-analysis">
+     Data Exploration &amp; Analysis
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#summarize-data">
+       Summarize Data
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#missing-data">
+       Missing Data
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#visualize-data">
+       Visualize Data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mmse-trajectories-over-time">
+     MMSE trajectories over time
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regression-analysis">
+     Regression Analysis
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#simple-linear-regression">
+       Simple Linear Regression
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#multiple-linear-regression">
+       Multiple Linear Regression
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#todo">
+   TODO
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="reproducible-reporting-using-markdown-python">
+<h1>Reproducible Reporting using Markdown - Python<a class="headerlink" href="#reproducible-reporting-using-markdown-python" title="Permalink to this headline">¶</a></h1>
+<p>Intro blurb</p>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="import-packages">
+<h3>Import packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/statsmodels/tools/_testing.py:19: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.
+  import pandas.util.testing as tm
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="download-oasis-dataset">
+<h3>Download OASIS Dataset<a class="headerlink" href="#download-oasis-dataset" title="Permalink to this headline">¶</a></h3>
+<p>We’ll be downloading the data from <code class="docutils literal notranslate"><span class="pre">http://www.oasis-brains.org/pdf/oasis_longitudinal.csv</span></code>.</p>
+<p>A full explanation of the data can be found in:</p>
+<p><em>Open Access Series of Imaging Studies (OASIS): Longitudinal MRI Data in Nondemented and Demented Older Adults. Marcus, DS, Fotenos, AF, Csernansky, JG, Morris, JC, Buckner, RL, 2010. Journal of Cognitive Neuroscience, 22, 2677-2684. doi: 10.1162/jocn.2009.21407</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://www.oasis-brains.org/pdf/oasis_longitudinal.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Subject ID</th>
+      <th>MRI ID</th>
+      <th>Group</th>
+      <th>Visit</th>
+      <th>MR Delay</th>
+      <th>M/F</th>
+      <th>Hand</th>
+      <th>Age</th>
+      <th>EDUC</th>
+      <th>SES</th>
+      <th>MMSE</th>
+      <th>CDR</th>
+      <th>eTIV</th>
+      <th>nWBV</th>
+      <th>ASF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>OAS2_0001</td>
+      <td>OAS2_0001_MR1</td>
+      <td>Nondemented</td>
+      <td>1</td>
+      <td>0</td>
+      <td>M</td>
+      <td>R</td>
+      <td>87</td>
+      <td>14</td>
+      <td>2.0</td>
+      <td>27.0</td>
+      <td>0.0</td>
+      <td>1987</td>
+      <td>0.696</td>
+      <td>0.883</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>OAS2_0001</td>
+      <td>OAS2_0001_MR2</td>
+      <td>Nondemented</td>
+      <td>2</td>
+      <td>457</td>
+      <td>M</td>
+      <td>R</td>
+      <td>88</td>
+      <td>14</td>
+      <td>2.0</td>
+      <td>30.0</td>
+      <td>0.0</td>
+      <td>2004</td>
+      <td>0.681</td>
+      <td>0.876</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>OAS2_0002</td>
+      <td>OAS2_0002_MR1</td>
+      <td>Demented</td>
+      <td>1</td>
+      <td>0</td>
+      <td>M</td>
+      <td>R</td>
+      <td>75</td>
+      <td>12</td>
+      <td>NaN</td>
+      <td>23.0</td>
+      <td>0.5</td>
+      <td>1678</td>
+      <td>0.736</td>
+      <td>1.046</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>OAS2_0002</td>
+      <td>OAS2_0002_MR2</td>
+      <td>Demented</td>
+      <td>2</td>
+      <td>560</td>
+      <td>M</td>
+      <td>R</td>
+      <td>76</td>
+      <td>12</td>
+      <td>NaN</td>
+      <td>28.0</td>
+      <td>0.5</td>
+      <td>1738</td>
+      <td>0.713</td>
+      <td>1.010</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>OAS2_0002</td>
+      <td>OAS2_0002_MR3</td>
+      <td>Demented</td>
+      <td>3</td>
+      <td>1895</td>
+      <td>M</td>
+      <td>R</td>
+      <td>80</td>
+      <td>12</td>
+      <td>NaN</td>
+      <td>22.0</td>
+      <td>0.5</td>
+      <td>1698</td>
+      <td>0.701</td>
+      <td>1.034</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>368</th>
+      <td>OAS2_0185</td>
+      <td>OAS2_0185_MR2</td>
+      <td>Demented</td>
+      <td>2</td>
+      <td>842</td>
+      <td>M</td>
+      <td>R</td>
+      <td>82</td>
+      <td>16</td>
+      <td>1.0</td>
+      <td>28.0</td>
+      <td>0.5</td>
+      <td>1693</td>
+      <td>0.694</td>
+      <td>1.037</td>
+    </tr>
+    <tr>
+      <th>369</th>
+      <td>OAS2_0185</td>
+      <td>OAS2_0185_MR3</td>
+      <td>Demented</td>
+      <td>3</td>
+      <td>2297</td>
+      <td>M</td>
+      <td>R</td>
+      <td>86</td>
+      <td>16</td>
+      <td>1.0</td>
+      <td>26.0</td>
+      <td>0.5</td>
+      <td>1688</td>
+      <td>0.675</td>
+      <td>1.040</td>
+    </tr>
+    <tr>
+      <th>370</th>
+      <td>OAS2_0186</td>
+      <td>OAS2_0186_MR1</td>
+      <td>Nondemented</td>
+      <td>1</td>
+      <td>0</td>
+      <td>F</td>
+      <td>R</td>
+      <td>61</td>
+      <td>13</td>
+      <td>2.0</td>
+      <td>30.0</td>
+      <td>0.0</td>
+      <td>1319</td>
+      <td>0.801</td>
+      <td>1.331</td>
+    </tr>
+    <tr>
+      <th>371</th>
+      <td>OAS2_0186</td>
+      <td>OAS2_0186_MR2</td>
+      <td>Nondemented</td>
+      <td>2</td>
+      <td>763</td>
+      <td>F</td>
+      <td>R</td>
+      <td>63</td>
+      <td>13</td>
+      <td>2.0</td>
+      <td>30.0</td>
+      <td>0.0</td>
+      <td>1327</td>
+      <td>0.796</td>
+      <td>1.323</td>
+    </tr>
+    <tr>
+      <th>372</th>
+      <td>OAS2_0186</td>
+      <td>OAS2_0186_MR3</td>
+      <td>Nondemented</td>
+      <td>3</td>
+      <td>1608</td>
+      <td>F</td>
+      <td>R</td>
+      <td>65</td>
+      <td>13</td>
+      <td>2.0</td>
+      <td>30.0</td>
+      <td>0.0</td>
+      <td>1333</td>
+      <td>0.801</td>
+      <td>1.317</td>
+    </tr>
+  </tbody>
+</table>
+<p>373 rows × 15 columns</p>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="pre-processing-the-data">
+<h2>Pre-processing the Data<a class="headerlink" href="#pre-processing-the-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dementia-status-from-cdr">
+<h3>Dementia Status from CDR<a class="headerlink" href="#dementia-status-from-cdr" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cdr_mapper</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;No Dementia&quot;</span><span class="p">,</span>
+    <span class="mf">0.5</span><span class="p">:</span> <span class="s2">&quot;Very Mild Dementia&quot;</span><span class="p">,</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Mild Dementia&quot;</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="s2">&quot;Moderate Dementia&quot;</span><span class="p">,</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="s2">&quot;Severe Dementia&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Status&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;CDR&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">cdr_mapper</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create colours for the different &#39;Status&#39; categories</span>
+<span class="n">status_colours</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">i</span><span class="p">:</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cdr_mapper</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;colorblind&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Status&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No Dementia           206
+Very Mild Dementia    123
+Mild Dementia          41
+Moderate Dementia       3
+Name: Status, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stretch: get a breakdown of the status by visit? (TO DECIDE)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="variable-types">
+<h3>Variable Types<a class="headerlink" href="#variable-types" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Subject ID     object
+MRI ID         object
+Group          object
+Visit           int64
+MR Delay        int64
+M/F            object
+Hand           object
+Age             int64
+EDUC            int64
+SES           float64
+MMSE          float64
+CDR           float64
+eTIV            int64
+nWBV          float64
+ASF           float64
+Status         object
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Coerce types? Not actually needed but good practice?</strong></p>
+</div>
+<div class="section" id="convert-categorical-data">
+<h3>Convert Categorical Data<a class="headerlink" href="#convert-categorical-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;M/F&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span>
+  <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visits">
+<h3>Visits<a class="headerlink" href="#visits" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Visit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1    150
+2    144
+3     58
+4     15
+5      6
+Name: Visit, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Filter for baseline data, and look at their status on arrival</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_baseline</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Visit&quot;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_baseline</span><span class="p">[</span><span class="s2">&quot;Status&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No Dementia           85
+Very Mild Dementia    52
+Mild Dementia         13
+Name: Status, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-exploration-analysis">
+<h2>Data Exploration &amp; Analysis<a class="headerlink" href="#data-exploration-analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="summarize-data">
+<h3>Summarize Data<a class="headerlink" href="#summarize-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Subject ID</th>
+      <th>MRI ID</th>
+      <th>Group</th>
+      <th>Visit</th>
+      <th>MR Delay</th>
+      <th>M/F</th>
+      <th>Hand</th>
+      <th>Age</th>
+      <th>EDUC</th>
+      <th>SES</th>
+      <th>MMSE</th>
+      <th>CDR</th>
+      <th>eTIV</th>
+      <th>nWBV</th>
+      <th>ASF</th>
+      <th>Status</th>
+      <th>Sex</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>373</td>
+      <td>373</td>
+      <td>373</td>
+      <td>373.000000</td>
+      <td>373.000000</td>
+      <td>373</td>
+      <td>373</td>
+      <td>373.000000</td>
+      <td>373.000000</td>
+      <td>354.000000</td>
+      <td>371.000000</td>
+      <td>373.000000</td>
+      <td>373.000000</td>
+      <td>373.000000</td>
+      <td>373.000000</td>
+      <td>373</td>
+      <td>373.000000</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>150</td>
+      <td>373</td>
+      <td>3</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>OAS2_0073</td>
+      <td>OAS2_0126_MR3</td>
+      <td>Nondemented</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>F</td>
+      <td>R</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>No Dementia</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>5</td>
+      <td>1</td>
+      <td>190</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>213</td>
+      <td>373</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>206</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.882038</td>
+      <td>595.104558</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>77.013405</td>
+      <td>14.597855</td>
+      <td>2.460452</td>
+      <td>27.342318</td>
+      <td>0.290885</td>
+      <td>1488.128686</td>
+      <td>0.729568</td>
+      <td>1.195461</td>
+      <td>NaN</td>
+      <td>0.571046</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.922843</td>
+      <td>635.485118</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.640957</td>
+      <td>2.876339</td>
+      <td>1.134005</td>
+      <td>3.683244</td>
+      <td>0.374557</td>
+      <td>176.139286</td>
+      <td>0.037135</td>
+      <td>0.138092</td>
+      <td>NaN</td>
+      <td>0.495592</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>60.000000</td>
+      <td>6.000000</td>
+      <td>1.000000</td>
+      <td>4.000000</td>
+      <td>0.000000</td>
+      <td>1106.000000</td>
+      <td>0.644000</td>
+      <td>0.876000</td>
+      <td>NaN</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>71.000000</td>
+      <td>12.000000</td>
+      <td>2.000000</td>
+      <td>27.000000</td>
+      <td>0.000000</td>
+      <td>1357.000000</td>
+      <td>0.700000</td>
+      <td>1.099000</td>
+      <td>NaN</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.000000</td>
+      <td>552.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>77.000000</td>
+      <td>15.000000</td>
+      <td>2.000000</td>
+      <td>29.000000</td>
+      <td>0.000000</td>
+      <td>1470.000000</td>
+      <td>0.729000</td>
+      <td>1.194000</td>
+      <td>NaN</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2.000000</td>
+      <td>873.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>82.000000</td>
+      <td>16.000000</td>
+      <td>3.000000</td>
+      <td>30.000000</td>
+      <td>0.500000</td>
+      <td>1597.000000</td>
+      <td>0.756000</td>
+      <td>1.293000</td>
+      <td>NaN</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.000000</td>
+      <td>2639.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>98.000000</td>
+      <td>23.000000</td>
+      <td>5.000000</td>
+      <td>30.000000</td>
+      <td>2.000000</td>
+      <td>2004.000000</td>
+      <td>0.837000</td>
+      <td>1.587000</td>
+      <td>NaN</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="missing-data">
+<h3>Missing Data<a class="headerlink" href="#missing-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count amount of missing data</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Subject ID     0
+MRI ID         0
+Group          0
+Visit          0
+MR Delay       0
+M/F            0
+Hand           0
+Age            0
+EDUC           0
+SES           19
+MMSE           2
+CDR            0
+eTIV           0
+nWBV           0
+ASF            0
+Status         0
+Sex            0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="visualize-data">
+<h3>Visualize Data<a class="headerlink" href="#visualize-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Histograms</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x_col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;EDUC&quot;</span><span class="p">,</span> <span class="s2">&quot;MMSE&quot;</span><span class="p">]):</span>
+  <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">delaxes</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Reproducible_Reporting_26_0.png" src="_images/Reproducible_Reporting_26_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stretch: stratified histograms</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+
+<span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x_col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;EDUC&quot;</span><span class="p">,</span> <span class="s2">&quot;MMSE&quot;</span><span class="p">]):</span>
+  <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Status&quot;</span><span class="p">,</span> <span class="n">multiple</span><span class="o">=</span><span class="s2">&quot;stack&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  
+<span class="n">fig</span><span class="o">.</span><span class="n">delaxes</span><span class="p">(</span><span class="n">axes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Reproducible_Reporting_27_0.png" src="_images/Reproducible_Reporting_27_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mmse-trajectories-over-time">
+<h2>MMSE trajectories over time<a class="headerlink" href="#mmse-trajectories-over-time" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">indiv_data</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Subject ID&quot;</span><span class="p">):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">indiv_data</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;MR Delay&quot;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;MMSE&quot;</span><span class="p">,</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.25</span><span class="p">,</span>
+        <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;solid&quot;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Reproducible_Reporting_29_0.png" src="_images/Reproducible_Reporting_29_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stretch: straified</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">group</span><span class="p">,</span> <span class="n">indiv_data</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Subject ID&quot;</span><span class="p">]):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">indiv_data</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;MR Delay&quot;</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="s2">&quot;MMSE&quot;</span><span class="p">,</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+        <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Status&quot;</span><span class="p">,</span>
+        <span class="n">palette</span><span class="o">=</span><span class="n">status_colours</span><span class="p">,</span>
+        <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.25</span><span class="p">,</span>
+        <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;solid&quot;</span><span class="p">,</span>
+        <span class="n">legend</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Reproducible_Reporting_30_0.png" src="_images/Reproducible_Reporting_30_0.png" />
+</div>
+</div>
+<p><strong>Investigate and fix the above, there is a discrepancy</strong></p>
+</div>
+<div class="section" id="regression-analysis">
+<h2>Regression Analysis<a class="headerlink" href="#regression-analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="simple-linear-regression">
+<h3>Simple Linear Regression<a class="headerlink" href="#simple-linear-regression" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;EDUC&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR&quot;</span><span class="p">]</span>
+<span class="n">x_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;Yrs of Education&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR&quot;</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_baseline</span><span class="p">[</span><span class="s2">&quot;MMSE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="k">for</span> <span class="n">x_col</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x_cols</span><span class="p">,</span> <span class="n">x_labels</span><span class="p">,</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">df_baseline</span><span class="p">[</span><span class="n">x_col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span>
+        <span class="n">y</span><span class="p">,</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">predict</span><span class="p">())</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;Purple&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;MMSE&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2"> vs MMSE: R-squared = </span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">rsquared</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Age vs MMSE: R-squared = 0.001
+Sex vs MMSE: R-squared = 0.048
+Yrs of Education vs MMSE: R-squared = 0.047
+CDR vs MMSE: R-squared = 0.479
+</pre></div>
+</div>
+<img alt="_images/Reproducible_Reporting_33_1.png" src="_images/Reproducible_Reporting_33_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;EDUC&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR&quot;</span><span class="p">]</span>
+<span class="n">x_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;Yrs of Education&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR&quot;</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_baseline</span><span class="p">[</span><span class="s2">&quot;MMSE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="k">for</span> <span class="n">x_col</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">x_cols</span><span class="p">,</span> <span class="n">x_labels</span><span class="p">,</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">df_baseline</span><span class="p">[</span><span class="n">x_col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span>
+        <span class="n">y</span><span class="p">,</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">predict</span><span class="p">())</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="p">[</span><span class="n">status_colours</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">df_baseline</span><span class="p">[</span><span class="s2">&quot;Status&quot;</span><span class="p">]])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;MMSE&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2"> vs MMSE: R-squared = </span><span class="si">{</span><span class="n">res</span><span class="o">.</span><span class="n">rsquared</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Age vs MMSE: R-squared = 0.001
+Sex vs MMSE: R-squared = 0.048
+Yrs of Education vs MMSE: R-squared = 0.047
+CDR vs MMSE: R-squared = 0.479
+</pre></div>
+</div>
+<img alt="_images/Reproducible_Reporting_34_1.png" src="_images/Reproducible_Reporting_34_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Potentially useful function to give them?</span>
+<span class="k">def</span> <span class="nf">plot_regression</span><span class="p">(</span><span class="n">x_var</span><span class="p">,</span> <span class="n">y_var</span><span class="o">=</span><span class="s2">&quot;MMSE&quot;</span><span class="p">,</span> <span class="n">x_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">df_baseline</span><span class="p">[</span><span class="n">x_var</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">df_baseline</span><span class="p">[</span><span class="n">y_var</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+  <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span>
+      <span class="n">y</span><span class="p">,</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="p">)</span>
+  <span class="n">res</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+  <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+  <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">res</span><span class="o">.</span><span class="n">predict</span><span class="p">())</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s2">&quot;Purple&quot;</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">res</span>
+
+<span class="n">_</span> <span class="o">=</span> <span class="n">plot_regression</span><span class="p">(</span><span class="s2">&quot;EDUC&quot;</span><span class="p">,</span> <span class="n">x_label</span><span class="o">=</span><span class="s2">&quot;Education&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Reproducible_Reporting_35_0.png" src="_images/Reproducible_Reporting_35_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="multiple-linear-regression">
+<h3>Multiple Linear Regression<a class="headerlink" href="#multiple-linear-regression" title="Permalink to this headline">¶</a></h3>
+<p><strong>We definitely need to give them a lot of this code…perhaps they have to fill in <code class="docutils literal notranslate"><span class="pre">x</span></code>, but we tell them to do <code class="docutils literal notranslate"><span class="pre">C(CDR)</span></code>?</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Age + EDUC + Sex + C(CDR)&quot;</span>
+<span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;MMSE&quot;</span>
+
+<span class="n">mod</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> ~ </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_baseline</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   MMSE   R-squared:                       0.493
+Model:                            OLS   Adj. R-squared:                  0.475
+Method:                 Least Squares   F-statistic:                     27.95
+Date:                Mon, 05 Jul 2021   Prob (F-statistic):           1.02e-19
+Time:                        13:30:15   Log-Likelihood:                -324.67
+No. Observations:                 150   AIC:                             661.3
+Df Residuals:                     144   BIC:                             679.4
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P&gt;|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept        29.1743      2.140     13.632      0.000      24.944      33.404
+C(CDR)[T.0.5]    -2.9600      0.411     -7.209      0.000      -3.772      -2.148
+C(CDR)[T.1.0]    -6.0383      0.649     -9.305      0.000      -7.321      -4.756
+Age              -0.0194      0.024     -0.825      0.411      -0.066       0.027
+EDUC              0.0734      0.065      1.137      0.257      -0.054       0.201
+Sex               0.5643      0.374      1.511      0.133      -0.174       1.303
+==============================================================================
+Omnibus:                       23.128   Durbin-Watson:                   1.929
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               53.918
+Skew:                          -0.623   Prob(JB):                     1.96e-12
+Kurtosis:                       5.660   Cond. No.                         943.
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">plot_partregress_grid</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_figheight</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_figwidth</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/Reproducible_Reporting_38_0.png" src="_images/Reproducible_Reporting_38_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="todo">
+<h1>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Finalize:</p>
+<ul>
+<li><p>The actual questions being asked</p>
+<ul>
+<li><p>Discrepancy in linear regression - fit for separate groups or just colourize for different groups?</p></li>
+</ul>
+</li>
+<li><p>Code to be provided, and what is to be filled in/done by them</p>
+<ul>
+<li><p>Then can add comments where needed</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>PDF export (double-check when all finalized)</p></li>
+<li><p>Compile a student and example version?</p></li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="oasis.html" title="previous page">Literate programming, Markdown &amp; Colab</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By DEMON Network<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
