@@ -1,0 +1,65 @@
+<h1>Pre-workshop instructions for R users</h1>
+<p>We encourage participants to use <code>RStudio cloud</code> during this workshop. The features of <code>RStudio cloud</code> map to the features of the desktop application <code>RStudio local</code> which you may be familiar with, with a few minor differences.  </p>
+<p>To help you get to grips with the main features, a useful <code>RStudio</code> cheat-sheet can be found <a href="https://rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf">here</a>, and to learn about the many <code>RStudio cloud</code> features you should go to the online documentation <a href="https://rstudio.cloud/learn">here</a>. </p>
+<h1>Creating an RStudio Cloud account</h1>
+<p>Please sign up to <a href="https://rstudio.cloud">RStudio Cloud</a> before the workshop and familiarise yourself with it using the tips below.</p>
+<p>If you would prefer to use your local copy of RStudio, you will need to install some software, and make sure that they are connected to one another. This may require you to get permission from your IT services department, so it is particularly important that you do this ahead of time. </p>
+<p><strong>If you cannot make any part of these instructions work before the session, then please sign up to <a href="https://rstudio.cloud">RStudio Cloud</a> using your GitHub account instead.</strong></p>
+<h1>Introduction to RStudio Cloud</h1>
+<h2>Analysis is organised in Projects</h2>
+<p><code>Projects</code> keep track of settings tied to a particular data analysis project. When starting a new project you will create a new <code>RStudio</code> <code>Project</code>. If you want to continue working on something,  just open up the relevant <code>RStudio</code> <code>Project</code>. </p>
+<p>In order open an existing project:
+1. <code>RStudio cloud</code>: your projects will be listed under <code>Your Workspace</code>
+2. <code>RStudio local</code>:  click on the <code>[project_name].Rproj</code> file in a file browser (your system file browser or the <code>RStudio</code> file browser); OR through RStudio menus: <code>File</code> &gt; <code>Open Project...</code>/<code>Recent Projects</code>.</p>
+<h3>Setting up RStudio projects</h3>
+<p>Complete either one of the exercises below, depending on whether you're using <code>RStudio local/cloud</code>. </p>
+<blockquote>
+<h3>Create a new <code>RStudio cloud</code> project</h3>
+<ol>
+<li>Navigate to <a href="rstudio.cloud">rstudio.cloud</a></li>
+<li>Navigate to the <code>Your Workspace</code> tab. </li>
+<li>Click <code>New Project</code></li>
+<li>Rename <code>Untitled Project</code> to <code>md-workshop</code>. 
+{: .challenge}</li>
+</ol>
+<h3>Create a new <code>RStudio local</code> project</h3>
+<ol>
+<li>Open RStudio</li>
+<li>Select <code>File</code> &gt; <code>New Project</code> &gt; <code>New Directory</code> &gt; <code>New Project</code> </li>
+<li><code>Directory name</code>: "md-workshop"</li>
+<li><code>Create project as...</code>: Select a convenient directory</li>
+<li>Select <code>Create Project</code>
+{: .challenge}</li>
+</ol>
+</blockquote>
+<p>You'll also need to install the required packages so please run the following: </p>
+<p><code>r
+list.of.packages &lt;- c("tidyverse", "data.table", "knitr", "markdown", "rmarkdown")
+new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)</code></p>
+<h2>Specilized panes have useful features</h2>
+<p>Each pane of <code>RStudio</code> has a special feature which helps you write code and manage your project. Let's go through them now: </p>
+<ol>
+<li><code>Console</code> - Runs <code>R</code> commands. </li>
+<li><code>Files</code> - File navigator. </li>
+<li><code>Terminal</code> - is the same as <code>Console</code> but for the <code>BASH/Git BASH</code> shell-language (or whatever shell language is available to you, e.g., <code>Powershell</code> on Windows).  This is useful for managing files and for doing complicated things with version control (not covered in this course). If you have <code>BASH/Git-BASH</code> try typing <code>pwd</code> to see what it does. </li>
+<li><code>Packages</code> - shows a list of all the packages you have installed. </li>
+<li><code>Help</code> -  is the help files for all installed packages. </li>
+<li><code>Environment</code> - as already mentioned, contains all your saved  variables/functions/dataframes etc. </li>
+<li><code>History</code> - a list of previously run commands. </li>
+</ol>
+<h3>Environment</h3>
+<p><code>Environment</code> shows all the environments that are available to you. This includes all the loaded libraries. </p>
+<h3>History</h3>
+<p>The history pane shows you all the previous commands that have been run. </p>
+<p>This feature of <code>History</code> is particularly useful - you can use it to iteratively build up your <code>R</code> script by: first trying things out in the console and second, easily transfer them to your script when you're happy with what they do. The <code>History</code> pane is searchable as well so you can add commands from previous sessions. </p>
+<h2>RStudio has tools for easy code writing and running</h2>
+<p>Other great features are:
+1. tab complete, 
+2. multiline editing,
+3. keyboard shortcuts. </p>
+<p>Note: the keyboard shortcuts won't work in <code>RStudio Cloud</code> as they clash with your browser shortcuts.</p>
+<h2>Further reading</h2>
+<p>Mastering all the features of an IDE is time consuming but well worth it. 
+Check out RStudio tutorials by clicking <a href="https://support.rstudio.com/hc/en-us/sections/200107586-Using-the-RStudio-IDE">here</a>
+{: .callout}</p>
