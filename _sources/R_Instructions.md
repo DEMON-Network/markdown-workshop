@@ -6,7 +6,7 @@ We encourage participants to use `RStudio cloud` during this workshop. The featu
 
 To help you get to grips with the main features, a useful `RStudio` cheat-sheet can be found [here](https://rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf), and to learn about the many `RStudio cloud` features you should go to the online documentation [here](https://rstudio.cloud/learn). 
 
-# Creating an RStudio Cloud account
+## Creating an RStudio Cloud account
 
 Please sign up to [RStudio Cloud](https://rstudio.cloud) before the workshop and familiarise yourself with it using the tips below.
 
@@ -14,9 +14,9 @@ If you would prefer to use your local copy of RStudio, you will need to install 
 
 **If you cannot make any part of these instructions work before the session, then please sign up to [RStudio Cloud](https://rstudio.cloud) using your GitHub account instead.**
 
-# Introduction to RStudio Cloud 
+## Introduction to RStudio Cloud 
 
-## Analysis is organised in Projects
+### Analysis is organised in Projects
 
 `Projects` keep track of settings tied to a particular data analysis project. When starting a new project you will create a new `RStudio` `Project`. If you want to continue working on something,  just open up the relevant `RStudio` `Project`. 
 
@@ -26,7 +26,7 @@ In order open an existing project:
 
 2. `RStudio local`:  click on the `[project_name].Rproj` file in a file browser (your system file browser or the `RStudio` file browser); OR through RStudio menus: `File` > `Open Project...`/`Recent Projects`.
 
-### Setting up RStudio projects
+#### Setting up RStudio projects
 
 Complete either one of the exercises below, depending on whether you're using `RStudio local/cloud`. 
 
@@ -51,7 +51,7 @@ new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"
 if(length(new.packages)) install.packages(new.packages)
 ```
 
-## Specilized panes have useful features
+### Specilized panes have useful features
 
 Each pane of `RStudio` has a special feature which helps you write code and manage your project. Let's go through them now: 
 
@@ -63,17 +63,17 @@ Each pane of `RStudio` has a special feature which helps you write code and mana
 6. `Environment` - as already mentioned, contains all your saved  variables/functions/dataframes etc. 
 7. `History` - a list of previously run commands. 
 
-### Environment
+#### Environment
 
 `Environment` shows all the environments that are available to you. This includes all the loaded libraries. 
 
-### History
+#### History
 
 The history pane shows you all the previous commands that have been run. 
 
 This feature of `History` is particularly useful - you can use it to iteratively build up your `R` script by: first trying things out in the console and second, easily transfer them to your script when you're happy with what they do. The `History` pane is searchable as well so you can add commands from previous sessions. 
 
-## RStudio has tools for easy code writing and running
+### RStudio has tools for easy code writing and running
 
 Other great features are:
 

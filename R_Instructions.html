@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Literate programming and RMarkdown" href="R_intro.html" />
-    <link rel="prev" title="Contributors" href="contributors.html" />
+    <link rel="prev" title="Markdown cheat sheet" href="cheat.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -96,6 +96,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="contributors.html">
    Contributors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="useful_links.html">
+   Useful links
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cheat.html">
+   Markdown cheat sheet
   </a>
  </li>
 </ul>
@@ -213,89 +223,84 @@
             </div>
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Pre-workshop instructions for R users
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creating-an-rstudio-cloud-account">
    Creating an RStudio Cloud account
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-to-rstudio-cloud">
    Introduction to RStudio Cloud
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#analysis-is-organised-in-projects">
      Analysis is organised in Projects
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#setting-up-rstudio-projects">
        Setting up RStudio projects
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-a-new-rstudio-cloud-project">
-       Create a new
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         RStudio
-        </span>
-        <span class="pre">
-         cloud
-        </span>
-       </code>
-       project
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#create-a-new-rstudio-local-project">
-       Create a new
-       <code class="docutils literal notranslate">
-        <span class="pre">
-         RStudio
-        </span>
-        <span class="pre">
-         local
-        </span>
-       </code>
-       project
-      </a>
-     </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-new-rstudio-cloud-project">
+     Create a new
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       RStudio
+      </span>
+      <span class="pre">
+       cloud
+      </span>
+     </code>
+     project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-a-new-rstudio-local-project">
+     Create a new
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       RStudio
+      </span>
+      <span class="pre">
+       local
+      </span>
+     </code>
+     project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#specilized-panes-have-useful-features">
      Specilized panes have useful features
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#environment">
        Environment
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#history">
        History
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#rstudio-has-tools-for-easy-code-writing-and-running">
      RStudio has tools for easy code writing and running
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#further-reading">
-     Further reading
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   Further reading
+  </a>
  </li>
 </ul>
 
@@ -312,17 +317,16 @@
 <h1>Pre-workshop instructions for R users<a class="headerlink" href="#pre-workshop-instructions-for-r-users" title="Permalink to this headline">¶</a></h1>
 <p>We encourage participants to use <code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">cloud</span></code> during this workshop. The features of <code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">cloud</span></code> map to the features of the desktop application <code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">local</span></code> which you may be familiar with, with a few minor differences.</p>
 <p>To help you get to grips with the main features, a useful <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> cheat-sheet can be found <a class="reference external" href="https://rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf">here</a>, and to learn about the many <code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">cloud</span></code> features you should go to the online documentation <a class="reference external" href="https://rstudio.cloud/learn">here</a>.</p>
-</div>
 <div class="section" id="creating-an-rstudio-cloud-account">
-<h1>Creating an RStudio Cloud account<a class="headerlink" href="#creating-an-rstudio-cloud-account" title="Permalink to this headline">¶</a></h1>
+<h2>Creating an RStudio Cloud account<a class="headerlink" href="#creating-an-rstudio-cloud-account" title="Permalink to this headline">¶</a></h2>
 <p>Please sign up to <a class="reference external" href="https://rstudio.cloud">RStudio Cloud</a> before the workshop and familiarise yourself with it using the tips below.</p>
 <p>If you would prefer to use your local copy of RStudio, you will need to install some software, and make sure that they are connected to one another. This may require you to get permission from your IT services department, so it is particularly important that you do this ahead of time.</p>
 <p><strong>If you cannot make any part of these instructions work before the session, then please sign up to <a class="reference external" href="https://rstudio.cloud">RStudio Cloud</a> using your GitHub account instead.</strong></p>
 </div>
 <div class="section" id="introduction-to-rstudio-cloud">
-<h1>Introduction to RStudio Cloud<a class="headerlink" href="#introduction-to-rstudio-cloud" title="Permalink to this headline">¶</a></h1>
+<h2>Introduction to RStudio Cloud<a class="headerlink" href="#introduction-to-rstudio-cloud" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="analysis-is-organised-in-projects">
-<h2>Analysis is organised in Projects<a class="headerlink" href="#analysis-is-organised-in-projects" title="Permalink to this headline">¶</a></h2>
+<h3>Analysis is organised in Projects<a class="headerlink" href="#analysis-is-organised-in-projects" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">Projects</span></code> keep track of settings tied to a particular data analysis project. When starting a new project you will create a new <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> <code class="docutils literal notranslate"><span class="pre">Project</span></code>. If you want to continue working on something,  just open up the relevant <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> <code class="docutils literal notranslate"><span class="pre">Project</span></code>.</p>
 <p>In order open an existing project:</p>
 <ol class="simple">
@@ -330,13 +334,14 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">local</span></code>:  click on the <code class="docutils literal notranslate"><span class="pre">[project_name].Rproj</span></code> file in a file browser (your system file browser or the <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> file browser); OR through RStudio menus: <code class="docutils literal notranslate"><span class="pre">File</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Project...</span></code>/<code class="docutils literal notranslate"><span class="pre">Recent</span> <span class="pre">Projects</span></code>.</p></li>
 </ol>
 <div class="section" id="setting-up-rstudio-projects">
-<h3>Setting up RStudio projects<a class="headerlink" href="#setting-up-rstudio-projects" title="Permalink to this headline">¶</a></h3>
+<h4>Setting up RStudio projects<a class="headerlink" href="#setting-up-rstudio-projects" title="Permalink to this headline">¶</a></h4>
 <p>Complete either one of the exercises below, depending on whether you’re using <code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">local/cloud</span></code>.</p>
 <p>You’ll also need to install the required packages so please run the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>list.of.packages &lt;- c(&quot;tidyverse&quot;, &quot;data.table&quot;, &quot;knitr&quot;, &quot;markdown&quot;, &quot;rmarkdown&quot;)
 new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]
 if(length(new.packages)) install.packages(new.packages)
 </pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="create-a-new-rstudio-cloud-project">
@@ -358,9 +363,8 @@ if(length(new.packages)) install.packages(new.packages)
 <li><p>Select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Project</span></code></p></li>
 </ol>
 </div>
-</div>
 <div class="section" id="specilized-panes-have-useful-features">
-<h2>Specilized panes have useful features<a class="headerlink" href="#specilized-panes-have-useful-features" title="Permalink to this headline">¶</a></h2>
+<h3>Specilized panes have useful features<a class="headerlink" href="#specilized-panes-have-useful-features" title="Permalink to this headline">¶</a></h3>
 <p>Each pane of <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> has a special feature which helps you write code and manage your project. Let’s go through them now:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Console</span></code> - Runs <code class="docutils literal notranslate"><span class="pre">R</span></code> commands.</p></li>
@@ -372,17 +376,17 @@ if(length(new.packages)) install.packages(new.packages)
 <li><p><code class="docutils literal notranslate"><span class="pre">History</span></code> - a list of previously run commands.</p></li>
 </ol>
 <div class="section" id="environment">
-<h3>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h3>
+<h4>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">Environment</span></code> shows all the environments that are available to you. This includes all the loaded libraries.</p>
 </div>
 <div class="section" id="history">
-<h3>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h3>
+<h4>History<a class="headerlink" href="#history" title="Permalink to this headline">¶</a></h4>
 <p>The history pane shows you all the previous commands that have been run.</p>
 <p>This feature of <code class="docutils literal notranslate"><span class="pre">History</span></code> is particularly useful - you can use it to iteratively build up your <code class="docutils literal notranslate"><span class="pre">R</span></code> script by: first trying things out in the console and second, easily transfer them to your script when you’re happy with what they do. The <code class="docutils literal notranslate"><span class="pre">History</span></code> pane is searchable as well so you can add commands from previous sessions.</p>
 </div>
 </div>
 <div class="section" id="rstudio-has-tools-for-easy-code-writing-and-running">
-<h2>RStudio has tools for easy code writing and running<a class="headerlink" href="#rstudio-has-tools-for-easy-code-writing-and-running" title="Permalink to this headline">¶</a></h2>
+<h3>RStudio has tools for easy code writing and running<a class="headerlink" href="#rstudio-has-tools-for-easy-code-writing-and-running" title="Permalink to this headline">¶</a></h3>
 <p>Other great features are:</p>
 <ol class="simple">
 <li><p>tab complete,</p></li>
@@ -390,6 +394,7 @@ if(length(new.packages)) install.packages(new.packages)
 <li><p>keyboard shortcuts.</p></li>
 </ol>
 <p>Note: the keyboard shortcuts won’t work in <code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">Cloud</span></code> as they clash with your browser shortcuts.</p>
+</div>
 </div>
 <div class="section" id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
@@ -423,7 +428,7 @@ Check out RStudio tutorials by clicking <a class="reference external" href="http
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="contributors.html" title="previous page">Contributors</a>
+    <a class='left-prev' id="prev-link" href="cheat.html" title="previous page">Markdown cheat sheet</a>
     <a class='right-next' id="next-link" href="R_intro.html" title="next page">Literate programming and RMarkdown</a>
 
         </div>

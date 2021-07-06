@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown cheat sheet &#8212; Reproducible reporting using markdown</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pre-workshop instructions for R users" href="R_Instructions.html" />
+    <link rel="prev" title="Useful links" href="useful_links.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Reproducible reporting using markdown</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Welcome to the practical session
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  General
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributors.html">
+   Contributors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="useful_links.html">
+   Useful links
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Markdown cheat sheet
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  R
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_Instructions.html">
+   Pre-workshop instructions for R users
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_intro.html">
+   Literate programming and RMarkdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_exercise.html">
+   Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_analysis.html">
+   R Worksheet
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="oasis.html">
+   Literate programming, Markdown &amp; Colab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Reproducible_Reporting.html">
+   Reproducible Reporting using Markdown - Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/cheat.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#headings">
+   Headings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#input">
+     Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#output">
+     Output
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#heading-2">
+   Heading 2
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heading-3">
+     Heading 3
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#heading-4">
+       Heading 4
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists">
+   Lists
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Output
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bullets">
+   Bullets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Output
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#links">
+   Links
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Output
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#images">
+   Images
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Output
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-chunks">
+     Code chunks
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id9">
+       Input
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       Output
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plots">
+     Plots
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id11">
+       Input
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id12">
+       Output
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inline-code">
+     Inline code
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id13">
+       Input
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id14">
+       Output
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="markdown-cheat-sheet">
+<h1>Markdown cheat sheet<a class="headerlink" href="#markdown-cheat-sheet" title="Permalink to this headline">¶</a></h1>
+<p>What follows is a non-comprehensive guide to Markdown syntax. The <code class="docutils literal notranslate"><span class="pre">code</span></code> blocks show the Markdown syntax, and underneath is the output. Read through it and then you can proceed to the exercise at the end.</p>
+<div class="section" id="headings">
+<h2>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="input">
+<h3>Input<a class="headerlink" href="#input" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="c1">## Heading 2</span>
+    <span class="c1">### Heading 3</span>
+    <span class="c1">#### Heading 4</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="output">
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="heading-2">
+<h2>Heading 2<a class="headerlink" href="#heading-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="heading-3">
+<h3>Heading 3<a class="headerlink" href="#heading-3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="heading-4">
+<h4>Heading 4<a class="headerlink" href="#heading-4" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="section" id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<p>Note - actual numbers don’t matter, just have a number and a period <code class="docutils literal notranslate"><span class="pre">.</span></code> The sub-items have been indented by a tab space.</p>
+<div class="section" id="id1">
+<h3>Input<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="mf">1.</span> <span class="n">Item</span> <span class="mi">1</span>
+    <span class="mf">1.</span> <span class="n">Item</span> <span class="mi">2</span>
+      <span class="mf">1.</span> <span class="n">sub</span> <span class="n">Item</span> <span class="mi">1</span>
+      <span class="mf">3.</span> <span class="n">sub</span> <span class="n">Item</span> <span class="mi">2</span>
+    <span class="mf">2.</span> <span class="n">Item</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Output<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Item 1</p></li>
+<li><p>Item 2</p>
+<ol class="simple">
+<li><p>sub Item 1</p></li>
+<li><p>sub Item 2</p></li>
+</ol>
+</li>
+<li><p>Item 3</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="bullets">
+<h2>Bullets<a class="headerlink" href="#bullets" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Input<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="o">*</span> <span class="n">Item</span> <span class="mi">1</span>
+    <span class="o">*</span> <span class="n">Item</span> <span class="mi">2</span>
+        <span class="o">*</span> <span class="n">sub</span> <span class="n">Item</span> <span class="mi">1</span>
+        <span class="o">*</span> <span class="n">sub</span> <span class="n">Item</span> <span class="mi">2</span>
+    <span class="o">*</span> <span class="n">Item</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Output<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Item 1</p></li>
+<li><p>Item 2</p>
+<ul>
+<li><p>sub Item 1</p></li>
+<li><p>sub Item 2</p></li>
+</ul>
+</li>
+<li><p>Item 3</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="links">
+<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h3>Input<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">link</span> <span class="n">text</span><span class="p">](</span><span class="n">www</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Output<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.google.com">link text</a></p>
+</div>
+</div>
+<div class="section" id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>Input<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![tidy data caption](./figs/tidy_data.jpg)
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>Output<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p><img alt="tidy data caption" src="_images/tidy_data.jpg" /></p>
+</div>
+<div class="section" id="code-chunks">
+<h3>Code chunks<a class="headerlink" href="#code-chunks" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id9">
+<h4>Input<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<p>You can also include code in code  and the output of code in ‘code chunks’.</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="sb">`r &#39;&#39;`</span>```{r}
+x &lt;- rnorm(2)
+
+for(i in 1:length(x)){
+  print(x[[i]])
+}
+```
+</pre></div>
+</div>
+<p>You run the code by clicking the little triangle icon in the top right.</p>
+</div>
+<div class="section" id="id10">
+<h4>Output<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p>This prints the code and the result:</p>
+</div>
+</div>
+<div class="section" id="plots">
+<h3>Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h3>
+<p>As you can tell from the example document we <code class="docutils literal notranslate"><span class="pre">knit</span></code>ed at the start you can also show plots:</p>
+<div class="section" id="id11">
+<h4>Input<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```r &#39;&#39;`{r}
+library(ggplot2)
+x &lt;- rbeta(1000,5,2)
+y &lt;- rbeta(1000,0.3, 0.3)
+ggplot(data.frame(x,y), aes(x=x, y=y)) + geom_point()
+}
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h4>Output<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<p>gives the following code and plot</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="n">rbeta</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="n">rbeta</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>{: .language-r}
+<img alt="beta correlation" src="../fig/beta_correlation.png" /></p>
+</div>
+</div>
+<div class="section" id="inline-code">
+<h3>Inline code<a class="headerlink" href="#inline-code" title="Permalink to this headline">¶</a></h3>
+<p>You can also put code inline with text.</p>
+<div class="section" id="id13">
+<h4>Input<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```r &#39;&#39;`{r}
+x &lt;- rbeta(1000,5,2)
+```
+</pre></div>
+</div>
+<p>The mean of the observations is <code class="docutils literal notranslate"><span class="pre">`r</span> <span class="pre">knitr::inline_expr(&quot;mean(x)&quot;)`</span></code></p>
+</div>
+<div class="section" id="id14">
+<h4>Output<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<p>The mean of the observations is <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">mean(x)</span></code>.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="useful_links.html" title="previous page">Useful links</a>
+    <a class='right-next' id="next-link" href="R_Instructions.html" title="next page">Pre-workshop instructions for R users</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By DEMON Network<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

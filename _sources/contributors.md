@@ -37,4 +37,3 @@ This workshop is a collaboration between the [DEMON Network](https://demondement
 - Dr Charlotte James
 - Dr Cameron Shand
 - Ms Becki Green
-
