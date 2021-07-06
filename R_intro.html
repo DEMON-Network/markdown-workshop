@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="{.tabset}" href="R_analysis.html" />
+    <link rel="next" title="Exercise" href="R_exercise.html" />
     <link rel="prev" title="Pre-workshop instructions for R users" href="R_Instructions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -83,7 +83,19 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="index.html">
-   Introduction
+   Welcome to the practical session
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  General
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributors.html">
+   Contributors
   </a>
  </li>
 </ul>
@@ -104,8 +116,13 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="R_exercise.html">
+   Exercise
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="R_analysis.html">
-   {.tabset}
+   R Worksheet
   </a>
  </li>
 </ul>
@@ -118,6 +135,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="oasis.html">
    Literate programming, Markdown &amp; Colab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Reproducible_Reporting.html">
+   Reproducible Reporting using Markdown - Python
   </a>
  </li>
 </ul>
@@ -239,8 +261,13 @@
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#compare-inputs-outputs">
-     Compare inputs/outputs
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reproduce-and-extend-an-analysis">
+     Reproduce and extend an analysis.
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
@@ -387,7 +414,7 @@
 <p><strong>Markdown</strong> is a simple plain-text language that can be turned into formatted text, e.g., webpages, forum posts (stackexchange, Github) etc.</p>
 <p><strong>RMarkdown</strong> is a variant of <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> which allows you to incorporate code  within the
 final document. It can be turned into HTML, pdfs, word documents, books, theses etc. as well.</p>
-<p>The Carpentries courses (i.e., this course) are written <code class="docutils literal notranslate"><span class="pre">RMarkdown</span></code> and <code class="docutils literal notranslate"><span class="pre">Markdown</span></code>.</p>
+<p>The material for this practical session is written <code class="docutils literal notranslate"><span class="pre">RMarkdown</span></code> and <code class="docutils literal notranslate"><span class="pre">Markdown</span></code>.</p>
 </div>
 <div class="section" id="rmarkdown-what-s-it-good-for">
 <h2>RMarkdown -  what’s it good for?<a class="headerlink" href="#rmarkdown-what-s-it-good-for" title="Permalink to this headline">¶</a></h2>
@@ -412,9 +439,8 @@ final document. It can be turned into HTML, pdfs, word documents, books, theses 
 </ol>
 <p><em>Updating/changing analysis</em>: Edit the single <code class="docutils literal notranslate"><span class="pre">RMarkdown</span></code> file and click to create report.</p>
 <p><em>Sharing analysis</em>: Share data and the single <code class="docutils literal notranslate"><span class="pre">RMarkdown</span></code> file.</p>
-<p>This difference can be seen in the figure below which shows two directory structures the top
-with the conventional workflow, the bottom with the literate programming workflow.</p>
 <p>Of course for larger projects, you may have more than one <code class="docutils literal notranslate"><span class="pre">RMarkdown</span></code> file and you may have separate analysis scripts as well. An additional <em>major</em> benefit over writing documents in Word is that you can track changes with version control.</p>
+<!-- #region -->
 </div>
 </div>
 <div class="section" id="rmarkdown-quick-start">
@@ -430,10 +456,8 @@ the top:</p>
    <span class="o">---</span>
 </pre></div>
 </div>
-<p>{: .source}</p>
 <p>This is the ‘front matter’ - a collection of key/value pairs tells R how you want to process the output. The front matter is a powerful way of customising your document and you should consult the RStudio tutorial to find out more about this. The <code class="docutils literal notranslate"><span class="pre">RMarkdown</span></code> file needs to be saved and processed to create the final report, let’s do this now.</p>
-<p>Before going on to explain RMarkdown, you should spend some time by yourself comparing the inputs
-outputs:</p>
+<!-- #endregion -->
 </div>
 <div class="section" id="create-an-rmarkdown-file">
 <h2>Create an RMarkdown file<a class="headerlink" href="#create-an-rmarkdown-file" title="Permalink to this headline">¶</a></h2>
@@ -442,8 +466,7 @@ outputs:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">Title</span></code>: <code class="docutils literal notranslate"><span class="pre">Example</span> <span class="pre">Report</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Author</span></code>: [Your name]</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Default</span> <span class="pre">Output</span> <span class="pre">Format</span></code>: <code class="docutils literal notranslate"><span class="pre">HTML</span></code></p></li>
-<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> (not <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Empty</span> <span class="pre">Document</span></code>).<br />
-{: .challenge}</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">OK</span></code> (not <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Empty</span> <span class="pre">Document</span></code>).</p></li>
 </ol>
 </div>
 <div class="section" id="save-and-process-the-report">
@@ -453,29 +476,29 @@ outputs:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Name:</span></code> <code class="docutils literal notranslate"><span class="pre">example_report</span></code></p></li>
 <li><p>Click the <code class="docutils literal notranslate"><span class="pre">Knit</span></code> button (you’ll need to enable pop-ups in your Browser if you’re using <code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">cloud</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">cloud</span></code> the output will be in a new tabl</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">local</span></code> the output will be in the <code class="docutils literal notranslate"><span class="pre">Viewer</span></code> pane.
-{: .challenge}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">local</span></code> the output will be in the <code class="docutils literal notranslate"><span class="pre">Viewer</span></code> pane.</p></li>
 </ol>
 </div>
-<div class="section" id="compare-inputs-outputs">
-<h2>Compare inputs/outputs<a class="headerlink" href="#compare-inputs-outputs" title="Permalink to this headline">¶</a></h2>
-<p>Take a few minutes to read through the file <code class="docutils literal notranslate"><span class="pre">Example_report.Rmd</span></code> and look at the output
-in a browser tab/<code class="docutils literal notranslate"><span class="pre">Viewer</span></code> pane. Answer these three questions:</p>
+<div class="section" id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="reproduce-and-extend-an-analysis">
+<h2>Reproduce and extend an analysis.<a class="headerlink" href="#reproduce-and-extend-an-analysis" title="Permalink to this headline">¶</a></h2>
+<p>A small piece of exploratory analysis was done on the <code class="docutils literal notranslate"><span class="pre">oasis</span></code> dataset. While it was done in <code class="docutils literal notranslate"><span class="pre">RMarkdown</span></code> only the a html document is available. You want to reproduce and update this analysis.</p>
 <ol class="simple">
-<li><p>What does <code class="docutils literal notranslate"><span class="pre">**</span></code> do to text?</p></li>
-<li><p>How do you denote headings?</p></li>
-<li><p>How do you insert code?</p></li>
+<li><p>View the html report <span class="xref myst">here</span>, extract it and open it in a browser.</p></li>
+<li><p>Create a fresh RMarkdown document and reproduce the given report. You’ll need to look at the cheat-sheet <a class="reference external" href="https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">here</a> and you can copy and paste chunks of text if you wish.</p></li>
+<li><p>Add another section entitled ‘Updated analysis’ which makes the plot mentioned in the ‘further work’ section. Comment on the chart.</p></li>
+<li><p>Knit to a pdf by selecting <code class="docutils literal notranslate"><span class="pre">Knit</span> <span class="pre">to</span> <span class="pre">pdf</span></code> from the <code class="docutils literal notranslate"><span class="pre">Knit</span></code> menu. How does the front matter change?</p></li>
 </ol>
 </div>
 <div class="section" id="solution">
 <h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Makes text bold.</p></li>
-<li><p>With hashtags/octothorps/pound symbols: <kbd>#</kbd>.</p></li>
-<li><p>Inbetween three back apostrophes: <kbd>`</kbd>.
+<p>The <code class="docutils literal notranslate"><span class="pre">RMarkdown</span></code> file used for the full analysis (including the ‘Updated analysis’)
+can be downloaded <a class="reference external" href="https://gist.github.com/RobertArbon/51a6622ac67609e98fafc1f1b6b764ad">here</a>. Download it and compare it to yours.
+In the front matter an additional <code class="docutils literal notranslate"><span class="pre">pdf_document</span></code> has been added as part of an indented list under <code class="docutils literal notranslate"><span class="pre">output</span></code>.<br />
 {: .solution}
-{: .challenge}</p></li>
-</ol>
+{: .challenge}</p>
 </div>
 <div class="section" id="rmarkdown-syntax">
 <h2>RMarkdown - syntax<a class="headerlink" href="#rmarkdown-syntax" title="Permalink to this headline">¶</a></h2>
@@ -660,31 +683,8 @@ The mean of the observations is `` `r knitr::inline_expr(&quot;mean(x)&quot;)` `
 x &lt;- rbeta(1000,5,2)
 ```
 
-  
+
 The mean of the observations is `r mean(x)`. 
-
-
-## Exercise
-
-&gt; ## Reproduce and extend an analysis. 
-&gt; A small piece of exploratory analysis was done on the `oasis` dataset. While it was done in `RMarkdown` only the a html document is available. You want to reproduce and update this analysis. 
-&gt; 1. View the html report [here](DEMON-Network.github.io/markdown-workshop/R/Example-Reproducible-Reporting-using-Markdown.html), extract it and open it in a browser. 
-&gt; 1. Create a fresh RMarkdown document and reproduce the given report. You&#39;ll need to look at the cheat-sheet [here](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) and you can copy and paste chunks of text if you wish. 
-&gt; 2. Add another section entitled &#39;Updated analysis&#39; which makes the plot mentioned in the &#39;further work&#39; section. Comment on the chart. 
-&gt; 2. Knit to a pdf by selecting `Knit to pdf` from the `Knit` menu. How does the front matter change? 
-&gt; 
-&gt; &gt; ## Solution
-&gt; &gt; The `RMarkdown` file used for the full analysis (including the &#39;Updated analysis&#39;)
-&gt; &gt; can be downloaded [here](https://gist.github.com/RobertArbon/51a6622ac67609e98fafc1f1b6b764ad). Download it and compare it to yours.
-&gt; &gt; In the front matter an additional `pdf_document` has been added as part of an indented list under `output`.  
-&gt; {: .solution}
-{: .challenge}
-
-
-
-
-
-There&#39;s lots more that can be done with RMarkdown, please read go through the tutorial to find out more. You&#39;ll also have a chance to play around with it in [episode 5]({{ page.root }}{% link _episodes/05-putting-it-together.md %}). 
 </pre></div>
 </div>
 </div>
@@ -718,7 +718,7 @@ There&#39;s lots more that can be done with RMarkdown, please read go through th
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="R_Instructions.html" title="previous page">Pre-workshop instructions for R users</a>
-    <a class='right-next' id="next-link" href="R_analysis.html" title="next page">{.tabset}</a>
+    <a class='right-next' id="next-link" href="R_exercise.html" title="next page">Exercise</a>
 
         </div>
         

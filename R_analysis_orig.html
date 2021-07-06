@@ -1,0 +1,697 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{.tabset} &#8212; Reproducible reporting using markdown</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Literate programming, Markdown &amp; Colab" href="oasis.html" />
+    <link rel="prev" title="Exercise" href="R_exercise.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Reproducible reporting using markdown</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Welcome to the practical session
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  General
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributors.html">
+   Contributors
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  R
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_Instructions.html">
+   Pre-workshop instructions for R users
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_intro.html">
+   Literate programming and RMarkdown
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="R_exercise.html">
+   Exercise
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   {.tabset}
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="oasis.html">
+   Literate programming, Markdown &amp; Colab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Reproducible_Reporting.html">
+   Reproducible Reporting using Markdown - Python
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/R_analysis_orig.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-install-packages">
+   Load/install packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-dataset-for-analysis">
+   Download dataset for analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#changing-variable-type">
+   Changing variable type
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-an-overview-about-the-dataset">
+   Getting an overview about the dataset
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#non-numerical-variables">
+     Non-numerical variables
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numerical-variables">
+     Numerical variables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-1">
+   Table 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#association-between-and-and-education-and-age-and-mmse">
+   Association between and and education and age and MMSE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#show-how-mmse-performance-changes-with-time">
+   Show how MMSE performance changes with time?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-do-age-sex-education-and-cdr-associate-with-mmse-performance-for-the-first-visit">
+   How do age, sex, education and CDR associate with MMSE performance for the first visit?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assumption-check">
+     Assumption check
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#result-table">
+     Result table
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references-r-session-information">
+   References R session information
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tabset">
+<h1>{.tabset}<a class="headerlink" href="#tabset" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>knitr::opts_chunk$set(echo = TRUE)
+</pre></div>
+</div>
+<div class="section" id="load-install-packages">
+<h2>Load/install packages<a class="headerlink" href="#load-install-packages" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>list.of.packages &lt;- c(&quot;patchwork&quot;, &quot;ggpubr&quot;, &quot;tidyverse&quot;, &quot;data.table&quot;, &quot;knitr&quot;, &quot;markdown&quot;, &quot;rmarkdown&quot;, &quot;dplyr&quot;, &quot;ggplot2&quot;, &quot;moments&quot;, &quot;car&quot;)
+
+# install packages if new
+new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]
+if(length(new.packages)) install.packages(new.packages)
+
+# load packages
+invisible(lapply(list.of.packages, library, character.only = TRUE))
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-dataset-for-analysis">
+<h2>Download dataset for analysis<a class="headerlink" href="#download-dataset-for-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Download and save the dataset for the analysis of: <a class="reference external" href="http://www.oasis-brains.org/pdf/oasis_longitudinal.csv">http://www.oasis-brains.org/pdf/oasis_longitudinal.csv</a></p>
+<p>Dataset description and explanation:</p>
+<p>Open Access Series of Imaging Studies (OASIS): Longitudinal MRI Data in Nondemented and Demented Older Adults.
+Marcus, DS, Fotenos, AF, Csernansky, JG, Morris, JC, Buckner, RL, 2010. Journal of Cognitive Neuroscience, 22, 2677-2684. doi: 10.1162/jocn.2009.21407</p>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>#set working directory
+setwd(&quot;/Users/boennigerm/Desktop/DEMON_reproducible-science&quot;)
+
+#load dataset
+dt.raw &lt;- read.csv(&quot;oasis_longitudinal.csv&quot;) 
+
+#load data dictionary
+dt.dict &lt;- read.csv(&quot;Data-dictionary.csv&quot;) 
+</pre></div>
+</div>
+</div>
+<div class="section" id="changing-variable-type">
+<h2>Changing variable type<a class="headerlink" href="#changing-variable-type" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>We change the values of CDR from numeric values to ordered factors as suggested by the data dictionary.</p></li>
+</ol>
+<ul class="simple">
+<li><p>0 = no dementia</p></li>
+<li><p>0.5 = very mild AD</p></li>
+<li><p>1 = mild AD</p></li>
+<li><p>2 = moderate AD</p></li>
+</ul>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>dt &lt;- dt.raw %&gt;%
+  mutate(CDR = 
+           factor(ifelse(CDR == 0, 
+                         &quot;no dementia&quot;, 
+                         ifelse(CDR == 0.5, 
+                                &quot;very mild AD&quot;, 
+                                ifelse(CDR == 1,
+                                       &quot;mild AD&quot;,
+                                       ifelse(CDR == 2,
+                                              &quot;moderate AD&quot;,
+                                              NA)))), 
+                  levels=c(&quot;no dementia&quot;, &quot;very mild AD&quot;, &quot;mild AD&quot;, &quot;moderate AD&quot;), 
+                  ordered=TRUE))
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>We change “Visit” from numeric values to ordered factors (1-5).</p></li>
+</ol>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>dt &lt;- dt %&gt;%
+  mutate(Visit = factor(Visit, 
+                        levels=c(1,2,3,4,5),
+                        ordered=TRUE))
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>We change “SES” from numeric values to ordered factors (1 = highest to 5 = lowest status).</p></li>
+</ol>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>dt &lt;- dt %&gt;%
+  mutate(SES = factor(SES, 
+                      levels=c(1,2,3,4,5),
+                      ordered=TRUE))
+</pre></div>
+</div>
+</div>
+<div class="section" id="getting-an-overview-about-the-dataset">
+<h2>Getting an overview about the dataset<a class="headerlink" href="#getting-an-overview-about-the-dataset" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="non-numerical-variables">
+<h3>Non-numerical variables<a class="headerlink" href="#non-numerical-variables" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>numeric.var &lt;- dt[, sapply(dt, is.numeric)] %&gt;% 
+  names()
+
+kable(head(dt %&gt;% 
+             dplyr::select(-all_of(numeric.var))) %&gt;% 
+        data.frame(),
+      caption = &quot;Head of all non-numeric variables in the dataset.&quot;)
+
+kable(table(dt$Group, useNA = &quot;ifany&quot;) %&gt;% 
+        data.frame() %&gt;%
+        dplyr::rename(Group = Var1), 
+      caption = &quot;Factor levels and frequency of variable &#39;Group&#39;&quot;)
+
+kable(table(dt$Visit, useNA = &quot;ifany&quot;) %&gt;% 
+        data.frame() %&gt;%
+        dplyr::rename(Visit = Var1), 
+      caption = &quot;Factor levels and frequency of variable &#39;Visit&#39;&quot;)
+
+kable(table(dt$M.F, useNA = &quot;ifany&quot;) %&gt;% 
+        data.frame() %&gt;%
+        dplyr::rename(M.F = Var1), 
+      caption = &quot;Factor levels and frequency of variable &#39;M.F&#39;&quot;)
+
+kable(table(dt$Hand, useNA = &quot;ifany&quot;) %&gt;% 
+        data.frame() %&gt;%
+        dplyr::rename(Hand = Var1), 
+      caption = &quot;Factor levels and frequency of variable &#39;Hand&#39;&quot;)
+
+kable(table(dt$SES, useNA = &quot;ifany&quot;) %&gt;% 
+        data.frame() %&gt;%
+        dplyr::rename(SES = Var1), 
+      caption = &quot;Factor levels and frequency of variable &#39;SES&#39;&quot;)
+
+kable(table(dt$CDR, useNA = &quot;ifany&quot;) %&gt;% 
+        data.frame() %&gt;%
+        dplyr::rename(CDR = Var1), 
+      caption = &quot;Factor levels and frequency of variable &#39;CDR&#39;&quot;)
+</pre></div>
+</div>
+</div>
+<div class="section" id="numerical-variables">
+<h3>Numerical variables<a class="headerlink" href="#numerical-variables" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>kable(dt %&gt;% 
+        dplyr::select(all_of(numeric.var)) %&gt;%
+        summary() %&gt;% 
+        data.frame() %&gt;%
+        dplyr::select(-Var1) %&gt;%
+        dplyr::rename(Variable = Var2) %&gt;%
+        dplyr::mutate(Freq = gsub(&quot; &quot;, &quot;&quot;, Freq, fixed = TRUE),
+                      Freq = gsub(&quot;\&#39;&quot;, &quot;&quot;, Freq, fixed = TRUE)) %&gt;%
+        filter(!is.na(Freq)) %&gt;%
+        separate(Freq, c(&quot;V1&quot;, &quot;V2&quot;), sep= &quot;:&quot;) %&gt;%
+        group_by(Variable) %&gt;%
+        spread(V1, V2),
+      caption = &quot;Summary of all numeric variables in the dataset&quot;)
+</pre></div>
+</div>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>#fig.show=&quot;hold&quot;,  suppress = T
+par(mar = c(4, 4, 1, .1))
+#distribution
+distribution_check_plots &lt;- function(variable) {
+  a &lt;- dt %&gt;% filter(!is.na(.[[variable]])) 
+  
+  hist(a[[variable]], 
+       breaks = 50, 
+       xlab = paste0(variable),
+       main = paste0(&quot;Histogram of &quot;, variable))
+}
+
+invisible(lapply(numeric.var,distribution_check_plots))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="table-1">
+<h2>Table 1<a class="headerlink" href="#table-1" title="Permalink to this headline">¶</a></h2>
+<p>Create a typical table one. Show it in this Markdown and save it also as csv for integrating it, for example, into a manuscript.</p>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span># 1. Select variables for table
+myVars &lt;- names(dt %&gt;%
+                  dplyr::select(-Subject.ID, -MRI.ID))
+
+
+# 2. Make a list of all categorical variables from the myVars list for this table
+catVars &lt;- dt %&gt;% 
+  dplyr::select(all_of(myVars)) %&gt;%
+  dplyr::select_if(purrr::negate(is.numeric)) %&gt;% 
+  names()
+
+# 3. Check visually for non-normally distributed numerical variables 
+#hist() or histograms
+nonnormaldist &lt;- c(&quot;MR.Delay&quot;, &quot;MMSE&quot;)
+
+# 4. Create dataset for table 1
+table1dt &lt;- dt %&gt;%
+  dplyr::select(all_of(myVars))
+
+# 5. Create table
+tab1 &lt;- tableone::CreateTableOne(data = table1dt, 
+                                 vars = myVars, 
+                                 factorVars = catVars)
+
+# 6. Modify list of table to get a data frame
+tab2 &lt;- print(tab1, 
+              showAllLevels = TRUE, 
+              printToggle = FALSE, 
+              noSpaces = TRUE, 
+              explain = FALSE, 
+              test = TRUE, 
+              contDigits = 1, 
+              catDigits = 1, 
+              missing = TRUE,
+              nonnormal = nonnormaldist) %&gt;%
+  as.data.frame() %&gt;% 
+  data.table::setDT(., keep.rownames = TRUE)
+#summary(tab1) #gives more information regarding missing values
+
+# 7. Rename column and rownames (of rn) to create a nice table that can be used in a manuscript
+tab3 &lt;- tab2 %&gt;%
+  dplyr::mutate(
+    rn = ifelse(grepl(&quot;^X&quot;, rn), &quot;&quot;, rn)) %&gt;%
+  dplyr::mutate(
+    rn = dplyr::recode(rn,
+                       &quot;Group&quot; = &quot;Group, N (%)&quot;,
+                       &quot;Visit&quot; = &quot;Number of participants per visit, N (%)&quot;,
+                       &quot;MR.Delay&quot; = &quot;Time delay for MR imaging, median [IQR]&quot;,
+                       &quot;M.F&quot; = &quot;Sex, N (%)&quot;,
+                       &quot;Hand&quot; = &quot;Handedness, N (%)&quot;,
+                       &quot;Age&quot; = &quot;Age (years), M (SD)&quot;,
+                       &quot;EDUC&quot; = &quot;Education (years), M (SD)&quot;,
+                       &quot;SES&quot; = &quot;Socioeconomic status, N (%)&quot;,
+                       &quot;MMSE&quot; = &quot;Mini mental state examination, median [IQR]&quot;,
+                       &quot;CDR&quot; = &quot;Clinical Dementia Rating, N (%)&quot;,
+                       &quot;eTIV&quot; = &quot;Estimated total intracranial volume (cm3), M (SD)&quot;,
+                       &quot;nWBV&quot; = &quot;Normalized whole-brain volume, M (SD)&quot;,
+                       &quot;ASF&quot; = &quot;Atlas scaling factor, M (SD)&quot;),
+    level = dplyr::recode(level,
+                          &quot;F&quot; = &quot;women&quot;,
+                          &quot;M&quot; = &quot;men&quot;,
+                          &quot;R&quot; = &quot;right&quot;)) %&gt;%
+  dplyr::rename(&quot;Characteristic&quot; = &quot;rn&quot;) 
+
+# 8. Print table in markdown
+kable(tab3)
+
+# 9. Save table for manuscript
+write.csv(tab3, file = &quot;Table-1.csv&quot;, row.names = FALSE) 
+</pre></div>
+</div>
+</div>
+<div class="section" id="association-between-and-and-education-and-age-and-mmse">
+<h2>Association between and and education and age and MMSE<a class="headerlink" href="#association-between-and-and-education-and-age-and-mmse" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span># To be able to create a multitude of plots with different y-axis values I created a function for the plots and used a loop (lapply) to create them. 
+
+plotAgeAssociation &lt;- function(yaxis) {
+  # create complete cases dataset
+  dt.plot &lt;- dt %&gt;%
+    dplyr::select(Age, as.name(yaxis), CDR) %&gt;%
+    filter(complete.cases(.))
+  
+  # 1st plot including all CDR groups
+  plot1 &lt;- ggplot(data=dt.plot, aes_(x=~Age, y=as.name(yaxis), color=~CDR)) + 
+    geom_point() +
+    geom_smooth(method = lm) +
+    theme(legend.position = &quot;bottom&quot;)
+  
+  # 2nd plot excluding the moderate AD CDR group to visualise the associations of the other groups better
+  plot2 &lt;- ggplot(data=dt.plot, aes_(x=~Age, y=as.name(yaxis), color=~CDR)) + 
+    geom_point() +
+    geom_smooth(method = lm, 
+                data=dt.plot%&gt;%filter(CDR!=&quot;moderate AD&quot;), 
+                aes_(x=~Age, y=as.name(yaxis), color=~CDR)) +
+    theme(legend.position=&quot;none&quot;)
+  
+  # save the legend separately to have just one joint legend below the plots
+  legend &lt;- ggpubr::as_ggplot(ggpubr::get_legend(plot1))
+  
+  # summarise both plots and the legend to one combined figure
+  plot(((plot1 + 
+           theme(legend.position=&quot;none&quot;)) +
+          plot2)/
+         legend +
+         plot_layout(width = c(1,1), heights = c(13, 1)))
+  
+  # remove the single plots 1 and 2
+  rm(plot1); rm(plot2)
+}
+
+# run functions for education and MMSE on the y-axis
+invisible(lapply(c(&quot;EDUC&quot;, &quot;MMSE&quot;), plotAgeAssociation))
+</pre></div>
+</div>
+</div>
+<div class="section" id="show-how-mmse-performance-changes-with-time">
+<h2>Show how MMSE performance changes with time?<a class="headerlink" href="#show-how-mmse-performance-changes-with-time" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>dt %&gt;% 
+  dplyr::select(Subject.ID, MR.Delay, MMSE, CDR) %&gt;%
+  filter(complete.cases(.)) %&gt;%
+  ggplot(aes(x = MR.Delay, y = MMSE, color = CDR, group = Subject.ID)) +
+  geom_line()
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-do-age-sex-education-and-cdr-associate-with-mmse-performance-for-the-first-visit">
+<h2>How do age, sex, education and CDR associate with MMSE performance for the first visit?<a class="headerlink" href="#how-do-age-sex-education-and-cdr-associate-with-mmse-performance-for-the-first-visit" title="Permalink to this headline">¶</a></h2>
+<p>Create a regression model with MMSE as the outcome and age, sex, education and CDR as the independents. Use the no dementia group as reference group for CDR.</p>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>model &lt;- lm(MMSE ~ Age + M.F + EDUC + relevel(factor(CDR, ordered=FALSE), ref = &quot;no dementia&quot;), 
+            data = dt %&gt;% filter(Visit == 1))
+</pre></div>
+</div>
+<div class="section" id="assumption-check">
+<h3>Assumption check<a class="headerlink" href="#assumption-check" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>kable(moments::skewness(model$residuals) %&gt;%
+        data.frame() %&gt;%
+        dplyr::rename(&quot;Skewness of residuals&quot; = &quot;.&quot;), 
+      caption = &quot;Skewness of model residuals&quot;)
+kable(car::vif(model), 
+      caption = &quot;Variance-inflation factors to assess multicolinearity of model independents&quot;)
+</pre></div>
+</div>
+<p>Plots to check other regression model assumptions</p>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>par(mfrow = c(2,2)) # Change the panel layout to 2 x 2
+plot(model)
+</pre></div>
+</div>
+</div>
+<div class="section" id="result-table">
+<h3>Result table<a class="headerlink" href="#result-table" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span># Creating data frame including all results
+result&lt;- broom::tidy(model, conf.int = TRUE, conf.level = 0.95)
+result$N &lt;- model$residuals %&gt;% length()
+result$r.squared &lt;- summary(model)$r.squared
+
+# Modify outcome for export
+result %&gt;%
+  dplyr::rename(independent = term) %&gt;%
+  dplyr::mutate(
+    independent = dplyr::recode(independent,
+                         M.FM = &#39;Sex (ref. women)&#39;,
+                         EDUC = &#39;Education (in years)&#39;,
+                         &#39;relevel(factor(CDR, ordered = FALSE), ref = \&quot;no dementia\&quot;)mild AD&#39; = &#39;CDR (ref. no dementia) mild AD&#39;,
+                         &#39;relevel(factor(CDR, ordered = FALSE), ref = \&quot;no dementia\&quot;)very mild AD&#39; = &#39;CDR (ref. no dementia) very mild AD&#39;)) %&gt;%
+  kable(., caption = &quot;Outcome: MMSE&quot;)
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="references-r-session-information">
+<h2>References R session information<a class="headerlink" href="#references-r-session-information" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-{r notranslate"><div class="highlight"><pre><span></span>citation()
+sessionInfo() 
+lapply(list.of.packages, citation)
+
+#RStudio.Version()[-2] #both functions are not working in 
+#rstudioapi::versionInfo()[-2] 
+## both functions for the R Studio version are not working in R markdown. Run this code in the console and enter in manually. 
+</pre></div>
+</div>
+<p>To cite RStudio in publications use:
+RStudio Team (2019). RStudio: Integrated Development for R. RStudio, Inc., Boston, MA URL <a class="reference external" href="http://www.rstudio.com/.version">http://www.rstudio.com/.version</a>
+Version: 1.2.5033
+Release name: “Orange Blossom”</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="R_exercise.html" title="previous page">Exercise</a>
+    <a class='right-next' id="next-link" href="oasis.html" title="next page">Literate programming, Markdown &amp; Colab</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By DEMON Network<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

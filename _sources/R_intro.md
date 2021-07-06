@@ -23,7 +23,7 @@ This lesson will draw heavily from the following excellent resources:
 **RMarkdown** is a variant of `Markdown` which allows you to incorporate code  within the
 final document. It can be turned into HTML, pdfs, word documents, books, theses etc. as well. 
 
-The Carpentries courses (i.e., this course) are written `RMarkdown` and `Markdown`. 
+The material for this practical session is written `RMarkdown` and `Markdown`. 
 
 ## RMarkdown -  what's it good for?
 
@@ -49,12 +49,9 @@ With `RMarkdown` your workflow will be more like this:
 
 *Sharing analysis*: Share data and the single `RMarkdown` file. 
 
-This difference can be seen in the figure below which shows two directory structures the top 
-with the conventional workflow, the bottom with the literate programming workflow. 
-
 Of course for larger projects, you may have more than one `RMarkdown` file and you may have separate analysis scripts as well. An additional *major* benefit over writing documents in Word is that you can track changes with version control. 
 
-
+<!-- #region -->
 ## RMarkdown - quick start
 
 Let's create a quick-n-dirty RMarkdown document
@@ -65,7 +62,7 @@ Let's create a quick-n-dirty RMarkdown document
 > 3. `Author`: [Your name]
 > 4. `Default Output Format`: `HTML`
 > 3. Click `OK` (not `Create Empty Document`).  
-{: .challenge}
+
 
 You should see in your code editing pane a `RMarkdown` file called `Untitled1` with the following at 
 the top: 
@@ -77,7 +74,7 @@ the top:
    output: html_document
    ---
 ~~~
-{: .source}
+
 
 This is the 'front matter' - a collection of key/value pairs tells R how you want to process the output. The front matter is a powerful way of customising your document and you should consult the RStudio tutorial to find out more about this. The `RMarkdown` file needs to be saved and processed to create the final report, let's do this now. 
 
@@ -87,24 +84,26 @@ This is the 'front matter' - a collection of key/value pairs tells R how you wan
 > 3. Click the `Knit` button (you'll need to enable pop-ups in your Browser if you're using `RStudio cloud`)
 > 4. `RStudio cloud` the output will be in a new tabl 
 > 5. `RStudio local` the output will be in the `Viewer` pane. 
-{: .challenge}
+<!-- #endregion -->
 
-Before going on to explain RMarkdown, you should spend some time by yourself comparing the inputs
-outputs:
+## Exercise
 
-> ## Compare inputs/outputs
-> Take a few minutes to read through the file `Example_report.Rmd` and look at the output
-> in a browser tab/`Viewer` pane. Answer these three questions: 
-> 1. What does `**` do to text? 
-> 2. How do you denote headings? 
-> 3. How do you insert code? 
+> ## Reproduce and extend an analysis. 
+> A small piece of exploratory analysis was done on the `oasis` dataset. While it was done in `RMarkdown` only the a html document is available. You want to reproduce and update this analysis. 
+> 1. View the html report [here](DEMON-Network.github.io/markdown-workshop/R/Example-Reproducible-Reporting-using-Markdown.html), extract it and open it in a browser. 
+> 1. Create a fresh RMarkdown document and reproduce the given report. You'll need to look at the cheat-sheet [here](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) and you can copy and paste chunks of text if you wish. 
+> 2. Add another section entitled 'Updated analysis' which makes the plot mentioned in the 'further work' section. Comment on the chart. 
+> 2. Knit to a pdf by selecting `Knit to pdf` from the `Knit` menu. How does the front matter change? 
 > 
 > > ## Solution
-> > 1. Makes text bold. 
-> > 2. With hashtags/octothorps/pound symbols: <kbd>#</kbd>. 
-> > 3. Inbetween three back apostrophes: <kbd>`</kbd>. 
+> > The `RMarkdown` file used for the full analysis (including the 'Updated analysis')
+> > can be downloaded [here](https://gist.github.com/RobertArbon/51a6622ac67609e98fafc1f1b6b764ad). Download it and compare it to yours.
+> > In the front matter an additional `pdf_document` has been added as part of an indented list under `output`.  
 > {: .solution}
 {: .challenge}
+
+
+
 
 
 ## RMarkdown - syntax
@@ -262,28 +261,5 @@ The mean of the observations is `` `r knitr::inline_expr("mean(x)")` ``
 x <- rbeta(1000,5,2)
 ```
 
-  
+
 The mean of the observations is `r mean(x)`. 
-
-
-## Exercise
-
-> ## Reproduce and extend an analysis. 
-> A small piece of exploratory analysis was done on the `oasis` dataset. While it was done in `RMarkdown` only the a html document is available. You want to reproduce and update this analysis. 
-> 1. View the html report [here](DEMON-Network.github.io/markdown-workshop/R/Example-Reproducible-Reporting-using-Markdown.html), extract it and open it in a browser. 
-> 1. Create a fresh RMarkdown document and reproduce the given report. You'll need to look at the cheat-sheet [here](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) and you can copy and paste chunks of text if you wish. 
-> 2. Add another section entitled 'Updated analysis' which makes the plot mentioned in the 'further work' section. Comment on the chart. 
-> 2. Knit to a pdf by selecting `Knit to pdf` from the `Knit` menu. How does the front matter change? 
-> 
-> > ## Solution
-> > The `RMarkdown` file used for the full analysis (including the 'Updated analysis')
-> > can be downloaded [here](https://gist.github.com/RobertArbon/51a6622ac67609e98fafc1f1b6b764ad). Download it and compare it to yours.
-> > In the front matter an additional `pdf_document` has been added as part of an indented list under `output`.  
-> {: .solution}
-{: .challenge}
-
-
-
-
-
-There's lots more that can be done with RMarkdown, please read go through the tutorial to find out more. You'll also have a chance to play around with it in [episode 5]({{ page.root }}{% link _episodes/05-putting-it-together.md %}). 
