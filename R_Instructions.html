@@ -337,7 +337,8 @@
 <h4>Setting up RStudio projects<a class="headerlink" href="#setting-up-rstudio-projects" title="Permalink to this headline">¶</a></h4>
 <p>Complete either one of the exercises below, depending on whether you’re using <code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">local/cloud</span></code>.</p>
 <p>You’ll also need to install the required packages so please run the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>list.of.packages &lt;- c(&quot;tidyverse&quot;, &quot;data.table&quot;, &quot;knitr&quot;, &quot;markdown&quot;, &quot;rmarkdown&quot;)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>list.of.packages &lt;- c(&quot;patchwork&quot;, &quot;ggpubr&quot;, &quot;tidyverse&quot;, &quot;data.table&quot;, &quot;knitr&quot;, &quot;markdown&quot;, &quot;rmarkdown&quot;, &quot;dplyr&quot;, &quot;ggplot2&quot;, &quot;moments&quot;, &quot;car&quot;)
+
 new.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,&quot;Package&quot;])]
 if(length(new.packages)) install.packages(new.packages)
 </pre></div>
@@ -347,7 +348,7 @@ if(length(new.packages)) install.packages(new.packages)
 <div class="section" id="create-a-new-rstudio-cloud-project">
 <h3>Create a new <code class="docutils literal notranslate"><span class="pre">RStudio</span> <span class="pre">cloud</span></code> project<a class="headerlink" href="#create-a-new-rstudio-cloud-project" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>Navigate to <span class="xref myst">rstudio.cloud</span></p></li>
+<li><p>Navigate to <a class="reference external" href="https://rstudio.cloud">rstudio.cloud</a></p></li>
 <li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">Workspace</span></code> tab.</p></li>
 <li><p>Click <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Project</span></code></p></li>
 <li><p>Rename <code class="docutils literal notranslate"><span class="pre">Untitled</span> <span class="pre">Project</span></code> to <code class="docutils literal notranslate"><span class="pre">md-workshop</span></code>.</p></li>

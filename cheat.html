@@ -329,52 +329,16 @@
     <a class="reference internal nav-link" href="#code-chunks">
      Code chunks
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id9">
-       Input
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id10">
-       Output
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plots">
      Plots
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id11">
-       Input
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id12">
-       Output
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#inline-code">
      Inline code
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id13">
-       Input
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id14">
-       Output
-      </a>
-     </li>
-    </ul>
    </li>
   </ul>
  </li>
@@ -495,69 +459,12 @@
 </div>
 <div class="section" id="code-chunks">
 <h3>Code chunks<a class="headerlink" href="#code-chunks" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id9">
-<h4>Input<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
-<p>You can also include code in code  and the output of code in ‘code chunks’.</p>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="sb">`r &#39;&#39;`</span>```{r}
-x &lt;- rnorm(2)
-
-for(i in 1:length(x)){
-  print(x[[i]])
-}
-```
-</pre></div>
-</div>
-<p>You run the code by clicking the little triangle icon in the top right.</p>
-</div>
-<div class="section" id="id10">
-<h4>Output<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
-<p>This prints the code and the result:</p>
-</div>
 </div>
 <div class="section" id="plots">
 <h3>Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h3>
-<p>As you can tell from the example document we <code class="docutils literal notranslate"><span class="pre">knit</span></code>ed at the start you can also show plots:</p>
-<div class="section" id="id11">
-<h4>Input<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```r &#39;&#39;`{r}
-library(ggplot2)
-x &lt;- rbeta(1000,5,2)
-y &lt;- rbeta(1000,0.3, 0.3)
-ggplot(data.frame(x,y), aes(x=x, y=y)) + geom_point()
-}
-```
-</pre></div>
-</div>
-</div>
-<div class="section" id="id12">
-<h4>Output<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
-<p>gives the following code and plot</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">&lt;-</span> <span class="n">rbeta</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">&lt;-</span> <span class="n">rbeta</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
-<span class="n">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">frame</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span> <span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))</span> <span class="o">+</span> <span class="n">geom_point</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>{: .language-r}
-<img alt="beta correlation" src="../fig/beta_correlation.png" /></p>
-</div>
 </div>
 <div class="section" id="inline-code">
 <h3>Inline code<a class="headerlink" href="#inline-code" title="Permalink to this headline">¶</a></h3>
-<p>You can also put code inline with text.</p>
-<div class="section" id="id13">
-<h4>Input<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>```r &#39;&#39;`{r}
-x &lt;- rbeta(1000,5,2)
-```
-</pre></div>
-</div>
-<p>The mean of the observations is <code class="docutils literal notranslate"><span class="pre">`r</span> <span class="pre">knitr::inline_expr(&quot;mean(x)&quot;)`</span></code></p>
-</div>
-<div class="section" id="id14">
-<h4>Output<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
-<p>The mean of the observations is <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">mean(x)</span></code>.</p>
-</div>
 </div>
 </div>
 </div>

@@ -85,79 +85,11 @@ Note - actual numbers don't matter, just have a number and a period `.` The sub-
 
 ### Code chunks
 
-#### Input
-
-You can also include code in code  and the output of code in 'code chunks'.
-
-````markdown
-`r ''````{r}
-x <- rnorm(2)
-
-for(i in 1:length(x)){
-  print(x[[i]])
-}
-```
-````
-
-You run the code by clicking the little triangle icon in the top right.
-
-
-#### Output
-This prints the code and the result:
-```{r}
-x <- rnorm(2)
-
-for(i in 1:length(x)){
-  print(x[[i]])
-}
-```
 
 
 ### Plots
 
-As you can tell from the example document we `knit`ed at the start you can also show plots:
 
-#### Input
-````markdown
-```r ''`{r}
-library(ggplot2)
-x <- rbeta(1000,5,2)
-y <- rbeta(1000,0.3, 0.3)
-ggplot(data.frame(x,y), aes(x=x, y=y)) + geom_point()
-}
-```
-````
-
-#### Output
-
-gives the following code and plot
-~~~
-library(ggplot2)
-x <- rbeta(1000,5,2)
-y <- rbeta(1000,0.3, 0.3)
-ggplot(data.frame(x,y), aes(x=x, y=y)) + geom_point()
-~~~
-{: .language-r}
-![beta correlation](../fig/beta_correlation.png)
 
 ### Inline code
 
-You can also put code inline with text. 
-
-#### Input
-````markdown
-```r ''`{r}
-x <- rbeta(1000,5,2)
-```
-````
-
-The mean of the observations is `` `r knitr::inline_expr("mean(x)")` ``
-
-#### Output
-
-```{r}
-x <- rbeta(1000,5,2)
-```
-
-
-The mean of the observations is `r mean(x)`. 

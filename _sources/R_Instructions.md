@@ -31,7 +31,7 @@ In order open an existing project:
 Complete either one of the exercises below, depending on whether you're using `RStudio local/cloud`. 
 
 > ### Create a new `RStudio cloud` project
-> 1. Navigate to [rstudio.cloud](rstudio.cloud)
+> 1. Navigate to [rstudio.cloud](https://rstudio.cloud)
 > 2. Navigate to the `Your Workspace` tab. 
 > 3. Click `New Project`
 > 4. Rename `Untitled Project` to `md-workshop`. 
@@ -46,7 +46,8 @@ Complete either one of the exercises below, depending on whether you're using `R
 You'll also need to install the required packages so please run the following: 
 
 ```
-list.of.packages <- c("tidyverse", "data.table", "knitr", "markdown", "rmarkdown")
+list.of.packages <- c("patchwork", "ggpubr", "tidyverse", "data.table", "knitr", "markdown", "rmarkdown", "dplyr", "ggplot2", "moments", "car")
+
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 ```
