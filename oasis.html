@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Reproducible Reporting using Markdown - Python" href="Reproducible_Reporting.html" />
+    <link rel="next" title="Exercise" href="python_exercise.html" />
     <link rel="prev" title="R Worksheet" href="R_analysis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -98,6 +98,16 @@
    Contributors
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="useful_links.html">
+   Useful links
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cheat.html">
+   Markdown cheat sheet
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -135,6 +145,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Literate programming, Markdown &amp; Colab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_exercise.html">
+   Exercise
   </a>
  </li>
  <li class="toctree-l1">
@@ -446,7 +461,7 @@ You can keep working on your project by just opening up the relevant Jupyter not
 <p>For your first project please complete the exercise below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -456,7 +471,7 @@ You can keep working on your project by just opening up the relevant Jupyter not
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://www.oasis-brains.org/pdf/oasis_longitudinal.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://www.oasis-brains.org/pdf/oasis_longitudinal.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -495,7 +510,7 @@ The following code can also be used to mount your entire drive so it is accessib
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
 <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/gdrive&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -516,12 +531,12 @@ The following code can also be used to mount your entire drive so it is accessib
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">bash</span>
-<span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">DEMON</span><span class="o">/</span>
-<span class="k">if</span> <span class="p">[</span> <span class="o">-</span><span class="n">f</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">Colab</span>\ <span class="n">Notebooks</span><span class="o">/</span><span class="n">oasis</span><span class="o">.</span><span class="n">ipynb</span> <span class="p">];</span> <span class="n">then</span> 
-  <span class="n">mv</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">Colab</span>\ <span class="n">Notebooks</span><span class="o">/</span><span class="n">oasis</span><span class="o">.</span><span class="n">ipynb</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">DEMON</span><span class="o">/</span><span class="n">oasis</span><span class="o">.</span><span class="n">ipynb</span>
-<span class="n">fi</span>
-<span class="n">ls</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">DEMON</span><span class="o">/</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
+mkdir -p gdrive/MyDrive/DEMON/
+if [ -f gdrive/MyDrive/Colab\ Notebooks/oasis.ipynb ]; then 
+  mv gdrive/MyDrive/Colab\ Notebooks/oasis.ipynb gdrive/MyDrive/DEMON/oasis.ipynb
+fi
+ls gdrive/MyDrive/DEMON/
 </pre></div>
 </div>
 </div>
@@ -545,7 +560,7 @@ The following code can also be used to mount your entire drive so it is accessib
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">cd</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">DEMON</span><span class="o">/</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> gdrive/MyDrive/DEMON/
 </pre></div>
 </div>
 </div>
@@ -557,7 +572,7 @@ The following code can also be used to mount your entire drive so it is accessib
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;oasis_raw.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;oasis_raw.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -570,7 +585,7 @@ These include the notebook kernel, variables made, packages imported, and comman
 <p>Let’s investigate this with the following two exercises:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
 </pre></div>
 </div>
 </div>
@@ -639,7 +654,7 @@ These include the notebook kernel, variables made, packages imported, and comman
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%capture
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>%%capture
 !apt update
 !apt install texlive-xetex texlive-fonts-recommended texlive-generic-recommended
 </pre></div>
@@ -651,7 +666,7 @@ These include the notebook kernel, variables made, packages imported, and comman
 <h2>Now you have the ability to export your notebook as a pdf report<a class="headerlink" href="#now-you-have-the-ability-to-export-your-notebook-as-a-pdf-report" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!jupyter nbconvert oasis.ipynb --to pdf --output oasis.pdf
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>jupyter nbconvert oasis.ipynb --to pdf --output oasis.pdf
 </pre></div>
 </div>
 </div>
@@ -697,7 +712,7 @@ These include the notebook kernel, variables made, packages imported, and comman
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="R_analysis.html" title="previous page">R Worksheet</a>
-    <a class='right-next' id="next-link" href="Reproducible_Reporting.html" title="next page">Reproducible Reporting using Markdown - Python</a>
+    <a class='right-next' id="next-link" href="python_exercise.html" title="next page">Exercise</a>
 
         </div>
         

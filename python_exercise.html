@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; Reproducible reporting using markdown</title>
+    <title>Exercise &#8212; Reproducible reporting using markdown</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,8 +49,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Reproducible Reporting using Markdown - Python" href="Reproducible_Reporting.html" />
+    <link rel="prev" title="Literate programming, Markdown &amp; Colab" href="oasis.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -139,20 +141,20 @@
   Python
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="oasis.html">
    Literate programming, Markdown &amp; Colab
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python_exercise.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Exercise
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Reproducible_Reporting.html">
-   Python Worksheet
+   Reproducible Reporting using Markdown - Python
   </a>
  </li>
 </ul>
@@ -188,6 +190,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/python_exercise.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
             <!-- Full screen (wrap in <a> to have style consistency -->
@@ -204,6 +223,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Exercise
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reproduce-and-extend-an-analysis">
+   Reproduce and extend an analysis.
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -212,19 +249,49 @@
         
               <div>
                 
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="exercise">
+<h1>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div></div></blockquote>
+</div>
+<div class="section" id="reproduce-and-extend-an-analysis">
+<h1>Reproduce and extend an analysis.<a class="headerlink" href="#reproduce-and-extend-an-analysis" title="Permalink to this headline">¶</a></h1>
+<p>A small piece of exploratory analysis was done on the <code class="docutils literal notranslate"><span class="pre">oasis</span></code> dataset. While it was done in <code class="docutils literal notranslate"><span class="pre">colab</span></code> only the a html document is available. You want to reproduce and update this analysis.</p>
+<ol class="simple">
+<li><p>View the html report by right clicking on `Python Worksheet’ in the left hand menu, opening the link in a new tab.</p></li>
+<li><p>Create a fresh colab notebook and reproduce the given report. You’ll need to look at the <a class="reference internal" href="cheat.html"><span class="doc std std-doc">cheat-sheet</span></a> and you can copy and paste chunks of code if you wish.</p></li>
+<li><p>Add another section entitled ‘Updated analysis’ which makes the plot mentioned in the ‘further work’ section. Comment on the chart.</p></li>
+<li><p><strong>Create pdf?</strong>. How does the front matter change?</p></li>
+</ol>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="oasis.html" title="previous page">Literate programming, Markdown &amp; Colab</a>
+    <a class='right-next' id="next-link" href="Reproducible_Reporting.html" title="next page">Reproducible Reporting using Markdown - Python</a>
 
         </div>
         

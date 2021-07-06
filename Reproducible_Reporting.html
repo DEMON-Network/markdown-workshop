@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reproducible Reporting using Markdown - Python &#8212; Reproducible reporting using markdown</title>
+    <title>Python Worksheet &#8212; Reproducible reporting using markdown</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Literate programming, Markdown &amp; Colab" href="oasis.html" />
+    <link rel="prev" title="Exercise" href="python_exercise.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -97,6 +97,16 @@
    Contributors
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="useful_links.html">
+   Useful links
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cheat.html">
+   Markdown cheat sheet
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -136,9 +146,14 @@
    Literate programming, Markdown &amp; Colab
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python_exercise.html">
+   Exercise
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Reproducible Reporting using Markdown - Python
+   Python Worksheet
   </a>
  </li>
 </ul>
@@ -231,7 +246,7 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Reproducible Reporting using Markdown - Python
+   Python Worksheet
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
@@ -340,8 +355,8 @@
         
               <div>
                 
-  <div class="section" id="reproducible-reporting-using-markdown-python">
-<h1>Reproducible Reporting using Markdown - Python<a class="headerlink" href="#reproducible-reporting-using-markdown-python" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="python-worksheet">
+<h1>Python Worksheet<a class="headerlink" href="#python-worksheet" title="Permalink to this headline">¶</a></h1>
 <p>Intro blurb</p>
 <div class="section" id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
@@ -349,7 +364,7 @@
 <h3>Import packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -373,7 +388,7 @@
 <p><em>Open Access Series of Imaging Studies (OASIS): Longitudinal MRI Data in Nondemented and Demented Older Adults. Marcus, DS, Fotenos, AF, Csernansky, JG, Morris, JC, Buckner, RL, 2010. Journal of Cognitive Neuroscience, 22, 2677-2684. doi: 10.1162/jocn.2009.21407</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://www.oasis-brains.org/pdf/oasis_longitudinal.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://www.oasis-brains.org/pdf/oasis_longitudinal.csv&#39;</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
 </div>
@@ -626,7 +641,7 @@
 <h3>Dementia Status from CDR<a class="headerlink" href="#dementia-status-from-cdr" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cdr_mapper</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cdr_mapper</span> <span class="o">=</span> <span class="p">{</span>
     <span class="mi">0</span><span class="p">:</span> <span class="s2">&quot;No Dementia&quot;</span><span class="p">,</span>
     <span class="mf">0.5</span><span class="p">:</span> <span class="s2">&quot;Very Mild Dementia&quot;</span><span class="p">,</span>
     <span class="mi">1</span><span class="p">:</span> <span class="s2">&quot;Mild Dementia&quot;</span><span class="p">,</span>
@@ -640,7 +655,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create colours for the different &#39;Status&#39; categories</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create colours for the different &#39;Status&#39; categories</span>
 <span class="n">status_colours</span> <span class="o">=</span> <span class="p">{</span>
     <span class="n">i</span><span class="p">:</span><span class="n">j</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">cdr_mapper</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;colorblind&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="p">}</span>
@@ -650,7 +665,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Status&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Status&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -666,7 +681,7 @@ Name: Status, dtype: int64
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stretch: get a breakdown of the status by visit? (TO DECIDE)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stretch: get a breakdown of the status by visit? (TO DECIDE)</span>
 </pre></div>
 </div>
 </div>
@@ -676,7 +691,7 @@ Name: Status, dtype: int64
 <h3>Variable Types<a class="headerlink" href="#variable-types" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 </div>
 </div>
@@ -708,7 +723,7 @@ dtype: object
 <h3>Convert Categorical Data<a class="headerlink" href="#convert-categorical-data" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;M/F&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Sex&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;M/F&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span>
   <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
   <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="mi">1</span>
 <span class="p">})</span>
@@ -721,7 +736,7 @@ dtype: object
 <h3>Visits<a class="headerlink" href="#visits" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Visit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Visit&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -739,14 +754,14 @@ Name: Visit, dtype: int64
 <p>Filter for baseline data, and look at their status on arrival</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_baseline</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Visit&quot;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_baseline</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Visit&quot;</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df_baseline</span><span class="p">[</span><span class="s2">&quot;Status&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_baseline</span><span class="p">[</span><span class="s2">&quot;Status&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -767,7 +782,7 @@ Name: Status, dtype: int64
 <h3>Summarize Data<a class="headerlink" href="#summarize-data" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1039,7 +1054,7 @@ Name: Status, dtype: int64
 <h3>Missing Data<a class="headerlink" href="#missing-data" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count amount of missing data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Count amount of missing data</span>
 <span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1072,7 +1087,7 @@ dtype: int64
 <h3>Visualize Data<a class="headerlink" href="#visualize-data" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Histograms</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Histograms</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 
 <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
@@ -1085,12 +1100,12 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Reproducible_Reporting_26_0.png" src="_images/Reproducible_Reporting_26_0.png" />
+<img alt="_images/Reproducible_Reporting_27_0.png" src="_images/Reproducible_Reporting_27_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stretch: stratified histograms</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stretch: stratified histograms</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 
 <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
@@ -1103,7 +1118,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Reproducible_Reporting_27_0.png" src="_images/Reproducible_Reporting_27_0.png" />
+<img alt="_images/Reproducible_Reporting_28_0.png" src="_images/Reproducible_Reporting_28_0.png" />
 </div>
 </div>
 </div>
@@ -1112,7 +1127,7 @@ dtype: int64
 <h2>MMSE trajectories over time<a class="headerlink" href="#mmse-trajectories-over-time" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">indiv_data</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Subject ID&quot;</span><span class="p">):</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span>
         <span class="n">data</span><span class="o">=</span><span class="n">indiv_data</span><span class="p">,</span>
@@ -1128,12 +1143,12 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Reproducible_Reporting_29_0.png" src="_images/Reproducible_Reporting_29_0.png" />
+<img alt="_images/Reproducible_Reporting_30_0.png" src="_images/Reproducible_Reporting_30_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stretch: straified</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Stretch: straified</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">group</span><span class="p">,</span> <span class="n">indiv_data</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Subject ID&quot;</span><span class="p">]):</span>
@@ -1153,7 +1168,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Reproducible_Reporting_30_0.png" src="_images/Reproducible_Reporting_30_0.png" />
+<img alt="_images/Reproducible_Reporting_31_0.png" src="_images/Reproducible_Reporting_31_0.png" />
 </div>
 </div>
 <p><strong>Investigate and fix the above, there is a discrepancy</strong></p>
@@ -1164,7 +1179,7 @@ dtype: int64
 <h3>Simple Linear Regression<a class="headerlink" href="#simple-linear-regression" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;EDUC&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;EDUC&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR&quot;</span><span class="p">]</span>
 <span class="n">x_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;Yrs of Education&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR&quot;</span><span class="p">]</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -1194,12 +1209,12 @@ Yrs of Education vs MMSE: R-squared = 0.047
 CDR vs MMSE: R-squared = 0.479
 </pre></div>
 </div>
-<img alt="_images/Reproducible_Reporting_33_1.png" src="_images/Reproducible_Reporting_33_1.png" />
+<img alt="_images/Reproducible_Reporting_34_1.png" src="_images/Reproducible_Reporting_34_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;EDUC&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;EDUC&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR&quot;</span><span class="p">]</span>
 <span class="n">x_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Age&quot;</span><span class="p">,</span> <span class="s2">&quot;Sex&quot;</span><span class="p">,</span> <span class="s2">&quot;Yrs of Education&quot;</span><span class="p">,</span> <span class="s2">&quot;CDR&quot;</span><span class="p">]</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -1229,12 +1244,12 @@ Yrs of Education vs MMSE: R-squared = 0.047
 CDR vs MMSE: R-squared = 0.479
 </pre></div>
 </div>
-<img alt="_images/Reproducible_Reporting_34_1.png" src="_images/Reproducible_Reporting_34_1.png" />
+<img alt="_images/Reproducible_Reporting_35_1.png" src="_images/Reproducible_Reporting_35_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Potentially useful function to give them?</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Potentially useful function to give them?</span>
 <span class="k">def</span> <span class="nf">plot_regression</span><span class="p">(</span><span class="n">x_var</span><span class="p">,</span> <span class="n">y_var</span><span class="o">=</span><span class="s2">&quot;MMSE&quot;</span><span class="p">,</span> <span class="n">x_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">y_label</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
   <span class="n">x</span> <span class="o">=</span> <span class="n">df_baseline</span><span class="p">[</span><span class="n">x_var</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
   <span class="n">y</span> <span class="o">=</span> <span class="n">df_baseline</span><span class="p">[</span><span class="n">y_var</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -1256,7 +1271,7 @@ CDR vs MMSE: R-squared = 0.479
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Reproducible_Reporting_35_0.png" src="_images/Reproducible_Reporting_35_0.png" />
+<img alt="_images/Reproducible_Reporting_36_0.png" src="_images/Reproducible_Reporting_36_0.png" />
 </div>
 </div>
 </div>
@@ -1265,7 +1280,7 @@ CDR vs MMSE: R-squared = 0.479
 <p><strong>We definitely need to give them a lot of this code…perhaps they have to fill in <code class="docutils literal notranslate"><span class="pre">x</span></code>, but we tell them to do <code class="docutils literal notranslate"><span class="pre">C(CDR)</span></code>?</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Age + EDUC + Sex + C(CDR)&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Age + EDUC + Sex + C(CDR)&quot;</span>
 <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;MMSE&quot;</span>
 
 <span class="n">mod</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> ~ </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_baseline</span><span class="p">)</span>
@@ -1311,7 +1326,7 @@ Warnings:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">plot_partregress_grid</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">plot_partregress_grid</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">set_figheight</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">set_figwidth</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
@@ -1319,7 +1334,7 @@ Warnings:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/Reproducible_Reporting_38_0.png" src="_images/Reproducible_Reporting_38_0.png" />
+<img alt="_images/Reproducible_Reporting_39_0.png" src="_images/Reproducible_Reporting_39_0.png" />
 </div>
 </div>
 </div>
@@ -1372,7 +1387,7 @@ Warnings:
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="oasis.html" title="previous page">Literate programming, Markdown &amp; Colab</a>
+    <a class='left-prev' id="prev-link" href="python_exercise.html" title="previous page">Exercise</a>
 
         </div>
         
