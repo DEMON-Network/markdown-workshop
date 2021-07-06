@@ -13,7 +13,7 @@ This lesson will draw heavily from the following excellent resources:
 > These are all from the RStudio website:
 > * [Get Started with RMarkdown](https://rmarkdown.rstudio.com/lesson-1.html) - An extensive tutorial
 > * [Reference (pdf)](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf) - A 5 page reference of commands and concepts. 
-> * [Cheatsheet (pdf)](https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf) - A 2 page summary of the most important elements. 
+> * [Cheatsheet (pdf)](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) - A 2 page summary of the most important elements. 
 
 
 ## RMarkdown - what is it?
@@ -29,7 +29,7 @@ The material for this practical session is written `RMarkdown` and `Markdown`.
 
 Consider your normal data analysis workflow. It's probably something like this:
 
-#### 1. Conventional workflow
+### 1. Conventional workflow
 1. Do some data analysis in an `R` script. Use comments to help reader understand. 
 2. Save plots, tables, etc. in separate files (`fig1.png`, `tab1.csv`, etc.). 
 2. Write report in Word and insert figures, tables etc. 
@@ -40,7 +40,7 @@ Consider your normal data analysis workflow. It's probably something like this:
 
 With `RMarkdown` your workflow will be more like this: 
 
-#### 2. Literate programming workflow
+### 2. Literate programming workflow
 1. Do some data analysis in an `RMarkdown` file. All figures, tables are displayed in line - no need to save sepate files.  
 2. Write your report around the code in the `RMarkdown` file. The narrative of the analysis helps the reader understand the code.  
 3. One-click to create formatted Word/HTML/pdf report, or, one-click to publish to the web (requires setup - not covered in this course).  
