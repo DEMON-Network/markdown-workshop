@@ -82,14 +82,75 @@ Note - actual numbers don't matter, just have a number and a period `.` The sub-
 
 ![tidy data caption](./figs/tidy_data.jpg)
 
+<!-- #region -->
+## Code chunks
 
-### Code chunks
+### Input
+~~~
+```python
+
+def f(x):
+    return x**2
+
+```
+~~~
+### Output
+
+```python
+
+def f(x):
+    return x**2
+
+```
+<!-- #endregion -->
+
+## Tables 
+
+
+### Input
+
+~~~
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+~~~
+
+### Output
+
+| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here's this   |
+| Paragraph   | Text        | And more      |
+
+
+## Plots (R only)
 
 
 
-### Plots
+### Input
 
+~~~
+```r ''`{r}
+library(ggplot2)
+x <- rbeta(1000,5,2)
+y <- rbeta(1000,0.3, 0.3)
+ggplot(data.frame(x,y), aes(x=x, y=y)) + geom_point()
+}
+```
+~~~
 
+### Output
 
-### Inline code
+```r
+library(ggplot2)
+x <- rbeta(1000,5,2)
+y <- rbeta(1000,0.3, 0.3)
+ggplot(data.frame(x,y), aes(x=x, y=y)) + geom_point()
+```
 
+![beta correlation](./figs/beta_correlation.png)
+
+```python
+
+```

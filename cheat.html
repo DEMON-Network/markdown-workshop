@@ -154,7 +154,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Reproducible_Reporting.html">
-   Python Worksheet
+   Reproducible Reporting using Markdown - Python
   </a>
  </li>
 </ul>
@@ -330,19 +330,55 @@
      Output
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-chunks">
+   Code chunks
+  </a>
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#code-chunks">
-     Code chunks
+    <a class="reference internal nav-link" href="#id9">
+     Input
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plots">
-     Plots
+    <a class="reference internal nav-link" href="#id10">
+     Output
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tables">
+   Tables
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     Input
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#inline-code">
-     Inline code
+    <a class="reference internal nav-link" href="#id12">
+     Output
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plots-r-only">
+   Plots (R only)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Input
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Output
     </a>
    </li>
   </ul>
@@ -461,15 +497,92 @@
 <div class="section" id="id8">
 <h3>Output<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <p><img alt="tidy data caption" src="_images/tidy_data.jpg" /></p>
+<!-- #region -->
+</div>
 </div>
 <div class="section" id="code-chunks">
-<h3>Code chunks<a class="headerlink" href="#code-chunks" title="Permalink to this headline">¶</a></h3>
+<h2>Code chunks<a class="headerlink" href="#code-chunks" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3>Input<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```python
+
+def f(x):
+    return x**2
+
+```
+</pre></div>
 </div>
-<div class="section" id="plots">
-<h3>Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="inline-code">
-<h3>Inline code<a class="headerlink" href="#inline-code" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h3>Output<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+</pre></div>
+</div>
+<!-- #endregion -->
+</div>
+</div>
+<div class="section" id="tables">
+<h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h3>Input<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="n">Syntax</span>      <span class="o">|</span> <span class="n">Description</span> <span class="o">|</span> <span class="n">Test</span> <span class="n">Text</span>     <span class="o">|</span>
+<span class="o">|</span> <span class="p">:</span><span class="o">---</span>        <span class="o">|</span>    <span class="p">:</span><span class="o">----</span><span class="p">:</span>   <span class="o">|</span>          <span class="o">---</span><span class="p">:</span> <span class="o">|</span>
+<span class="o">|</span> <span class="n">Header</span>      <span class="o">|</span> <span class="n">Title</span>       <span class="o">|</span> <span class="n">Here</span><span class="s1">&#39;s this   |</span>
+<span class="o">|</span> <span class="n">Paragraph</span>   <span class="o">|</span> <span class="n">Text</span>        <span class="o">|</span> <span class="n">And</span> <span class="n">more</span>      <span class="o">|</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>Output<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Syntax</p></th>
+<th class="text-align:center head"><p>Description</p></th>
+<th class="text-align:right head"><p>Test Text</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Header</p></td>
+<td class="text-align:center"><p>Title</p></td>
+<td class="text-align:right"><p>Here’s this</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Paragraph</p></td>
+<td class="text-align:center"><p>Text</p></td>
+<td class="text-align:right"><p>And more</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="plots-r-only">
+<h2>Plots (R only)<a class="headerlink" href="#plots-r-only" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>Input<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```r &#39;&#39;`{r}
+library(ggplot2)
+x &lt;- rbeta(1000,5,2)
+y &lt;- rbeta(1000,0.3, 0.3)
+ggplot(data.frame(x,y), aes(x=x, y=y)) + geom_point()
+}
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h3>Output<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">rbeta</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">2</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">&lt;-</span> <span class="nf">rbeta</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span><span class="m">0.3</span><span class="p">,</span> <span class="m">0.3</span><span class="p">)</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">))</span> <span class="o">+</span> <span class="nf">geom_point</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="beta correlation" src="_images/beta_correlation.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
