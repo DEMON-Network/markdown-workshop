@@ -23,7 +23,7 @@ This lesson will draw heavily from the following excellent resources:
 **RMarkdown** is a variant of `Markdown` which allows you to incorporate code  within the
 final document. It can be turned into HTML, pdfs, word documents, books, theses etc. as well. 
 
-The material for this practical session is written `RMarkdown` and `Markdown`. 
+The material for this practical session is written in `RMarkdown` and `Markdown`. 
 
 ## RMarkdown -  what's it good for?
 
@@ -41,13 +41,13 @@ Consider your normal data analysis workflow. It's probably something like this:
 With `RMarkdown` your workflow will be more like this: 
 
 **2. Literate programming workflow**
-1. Do some data analysis in an `RMarkdown` file. All figures, tables are displayed in line - no need to save sepate files.  
+1. Do some data analysis in an `RMarkdown` file. All figures, tables are displayed in line - no need to save separate files.  
 2. Write your report around the code in the `RMarkdown` file. The narrative of the analysis helps the reader understand the code.  
 3. One-click to create formatted Word/HTML/pdf report, or, one-click to publish to the web (requires setup - not covered in this course).  
 
 *Updating/changing analysis*: Edit the single `RMarkdown` file and click to create report. 
 
-*Sharing analysis*: Share data and the single `RMarkdown` file. 
+*Sharing analysis*: Share data and the single `RMarkdown` file or the whole project folder. 
 
 Of course for larger projects, you may have more than one `RMarkdown` file and you may have separate analysis scripts as well. An additional *major* benefit over writing documents in Word is that you can track changes with version control. 
 

@@ -1,1 +1,17 @@
-theme: jekyll-theme-minimal
+# book settings
+title: Reproducible reporting using markdown
+author: DEMON Network
+#logo: images/logo.png
+
+
+#include bib file
+#bibtex_bibfiles:
+#    - references.bib
+    
+#only build files specified in table of contents file
+only_build_toc_files: true
+
+execute:
+  execute_notebooks: cache #cache output from .ipynb files for faster build
+  timeout: -1 #no time restriction on notebook execution
+
