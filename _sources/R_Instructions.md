@@ -26,7 +26,7 @@ In order open an existing project:
 
 2. `RStudio local`:  click on the `[project_name].Rproj` file in a file browser (your system file browser or the `RStudio` file browser); OR through RStudio menus: `File` > `Open Project...`/`Recent Projects`.
 
-#### Setting up RStudio projects
+### Setting up RStudio projects
 
 Complete either one of the exercises below, depending on whether you're using `RStudio local/cloud`. 
 

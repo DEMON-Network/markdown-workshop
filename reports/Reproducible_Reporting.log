@@ -79,7 +79,7 @@ df.head(5)
 During handling of the above exception, another exception occurred:
 
 [0;31mURLError[0m                                  Traceback (most recent call last)
-[0;32m/var/folders/7t/k0r6nhkn36j3dhpdrmqmfbrh0000gn/T/ipykernel_25332/1438425689.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/var/folders/7t/k0r6nhkn36j3dhpdrmqmfbrh0000gn/T/ipykernel_26235/1438425689.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mdf[0m [0;34m=[0m [0mpd[0m[0;34m.[0m[0mread_csv[0m[0;34m([0m[0;34m'http://www.oasis-brains.org/pdf/oasis_longitudinal.csv'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0;31m# Print out the top 5 rows of the DataFrame[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      3[0m [0mdf[0m[0;34m.[0m[0mhead[0m[0;34m([0m[0;36m5[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
