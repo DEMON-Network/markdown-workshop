@@ -6,6 +6,5 @@ This workshop was a collaboration between the [DEMON Network](https://demondemen
 
 All materials from the workshop can be found in this repository.
 
-If you would like to try the material from the practical session, please go to [the repo website](https://demon-network.github.io/markdown-workshop/)
-
--  
+If you would like to try the material from the practical session, you can find everything you will need [here](https://demon-network.github.io/markdown-workshop/)
+  
