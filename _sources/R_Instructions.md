@@ -46,13 +46,14 @@ Complete either one of the exercises below, depending on whether you're using `R
 You'll also need to install the required packages so please run the following: 
 
 ```
-list.of.packages <- c("patchwork", "ggpubr", "tidyverse", "data.table", "knitr", "markdown", "rmarkdown", "dplyr", "ggplot2", "moments", "car")
+list.of.packages <- c("patchwork", "ggpubr", "tidyverse", "data.table", "knitr", "markdown",
+ "rmarkdown", "dplyr", "ggplot2", "moments", "car")
 
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 ```
 
-### Specilized panes have useful features
+### Specialised panes have useful features
 
 Each pane of `RStudio` has a special feature which helps you write code and manage your project. Let's go through them now: 
 
@@ -85,7 +86,7 @@ Other great features are:
 3. keyboard shortcuts. 
 
 Note: the keyboard shortcuts won't work in `RStudio Cloud` as they clash with your browser shortcuts.
-             
+
 
 ## Further reading
 Mastering all the features of an IDE is time consuming but well worth it. 
