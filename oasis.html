@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Exercise" href="python_exercise.html" />
-    <link rel="prev" title="R Worksheet" href="R_analysis.html" />
+    <link rel="next" title="Python Exercise" href="python_exercise.html" />
+    <link rel="prev" title="R Exercise" href="R_exercise.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -127,12 +127,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="R_exercise.html">
-   Exercise
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="R_analysis.html">
-   R Worksheet
+   R Exercise
   </a>
  </li>
 </ul>
@@ -149,7 +144,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="python_exercise.html">
-   Exercise
+   Python Exercise
   </a>
  </li>
  <li class="toctree-l1">
@@ -251,11 +246,6 @@
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#markdown-colaboratory-further-reading">
-     Markdown Colaboratory further reading
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#markdown-what-is-it">
      Markdown - what is it?
     </a>
@@ -264,22 +254,10 @@
     <a class="reference internal nav-link" href="#markdown-what-s-it-good-for">
      Markdown -  what’s it good for?
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#conventional-workflow">
-       1. Conventional workflow
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#literate-programming-workflow">
-       2. Literate programming workflow
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#goals-for-this-episode">
-     Goals for this episode
+    <a class="reference internal nav-link" href="#goals-for-this-notebook">
+     Goals for this notebook
     </a>
    </li>
   </ul>
@@ -311,61 +289,45 @@
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#create-a-new-colab-notebook">
-     Create a new
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       Colab
-      </span>
-     </code>
-     notebook
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#working-on-a-specific-folder-in-drive">
      Working on a specific folder in drive
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#use-ipython-magic-commands">
-     Use Ipython magic commands
+     Use IPython magic commands
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#save-the-data-in-the-newly-created-folder">
-     Save the data in the newly created folder
+    <a class="reference internal nav-link" href="#saving-the-oasis-data">
+     Saving the OASIS Data
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#notebooks-make-analysis-easier">
      Notebooks make analysis easier
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#starting-where-you-left-off">
-     Starting where you left off
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#colab-is-memoryless">
-     Colab is memoryless
-    </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#now-if-you-reset-your-runtime-the-results-will-be-the-same-every-time">
-       Now if you reset your runtime the results will be the same every time
+      <a class="reference internal nav-link" href="#starting-where-you-left-off">
+       Starting where you left off
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#colab-is-memoryless">
+       Colab is memoryless
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#generate-pdf-reports-from-a-notebook">
-     Generate pdf reports from a notebook
+     Generate PDF reports from a notebook
     </a>
    </li>
    <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#now-you-have-the-ability-to-export-your-notebook-as-a-pdf-report">
-     Now you have the ability to export your notebook as a pdf report
+    <a class="reference internal nav-link" href="#export-your-notebook-as-a-pdf-report">
+     Export your notebook as a PDF report
     </a>
    </li>
   </ul>
@@ -389,15 +351,11 @@
 </div></blockquote>
 <p>Jupyter notebook is a method for performing literate programming and is a powerful way of presenting your analysis in a way that’s easy to code and easy to read. The “snippets of source code” are your Python syntax. The “explanation of the its logic in a natural language” is your analysis report.</p>
 <p>This lesson will draw heavily from the following excellent resources:</p>
-<div class="section" id="markdown-colaboratory-further-reading">
-<h2>Markdown Colaboratory further reading<a class="headerlink" href="#markdown-colaboratory-further-reading" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://colab.research.google.com/notebooks/intro.ipynb?utm_source=scs-index">Welcome To Colaboratory</a> - An extensive tutorial</p></li>
 <li><p><a class="reference external" href="https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">Reference (pdf)</a> - A 5 page reference of commands and concepts.</p></li>
-<li><p><a class="reference external" href="https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">Cheatsheet (pdf)</a> - A 2 page summary of the most important elements.
-{: .callout}</p></li>
+<li><p><a class="reference external" href="https://rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf">Cheatsheet (pdf)</a> - A 2 page summary of the most important elements.</p></li>
 </ul>
-</div>
 <div class="section" id="markdown-what-is-it">
 <h2>Markdown - what is it?<a class="headerlink" href="#markdown-what-is-it" title="Permalink to this headline">¶</a></h2>
 <p><strong>Markdown</strong> is a simple plain-text language that can be turned into formatted text, e.g., webpages, forum posts (stackexchange, Github) etc.</p>
@@ -408,8 +366,7 @@ final document. It can be turned into HTML, pdfs, word documents, books, theses 
 <div class="section" id="markdown-what-s-it-good-for">
 <h2>Markdown -  what’s it good for?<a class="headerlink" href="#markdown-what-s-it-good-for" title="Permalink to this headline">¶</a></h2>
 <p>Consider your normal data analysis workflow. It’s probably something like this:</p>
-<div class="section" id="conventional-workflow">
-<h3>1. Conventional workflow<a class="headerlink" href="#conventional-workflow" title="Permalink to this headline">¶</a></h3>
+<p><strong>1. Conventional workflow</strong></p>
 <ol class="simple">
 <li><p>Do some data analysis in an <code class="docutils literal notranslate"><span class="pre">python</span></code> script. Use comments to help reader understand.</p></li>
 <li><p>Save plots, tables, etc. in separate files (<code class="docutils literal notranslate"><span class="pre">fig1.png</span></code>, <code class="docutils literal notranslate"><span class="pre">tab1.csv</span></code>, etc.).</p></li>
@@ -418,9 +375,7 @@ final document. It can be turned into HTML, pdfs, word documents, books, theses 
 <p><em>Updating/changing analysis</em>: Edit <code class="docutils literal notranslate"><span class="pre">python</span></code> scripts, Word document, insert figures, potentially change figure lables, <code class="docutils literal notranslate"><span class="pre">fig1.png</span></code>-&gt; <code class="docutils literal notranslate"><span class="pre">fig2.png</span></code> etc..</p>
 <p><em>Sharing analysis</em>: Share data, R scripts, plots, tables, Word/Latex files. Also include how all the parts relate to each other in a README.</p>
 <p>With <code class="docutils literal notranslate"><span class="pre">Colab</span></code> your workflow will be more like this:</p>
-</div>
-<div class="section" id="literate-programming-workflow">
-<h3>2. Literate programming workflow<a class="headerlink" href="#literate-programming-workflow" title="Permalink to this headline">¶</a></h3>
+<p><strong>2. Literate programming workflow</strong></p>
 <ol class="simple">
 <li><p>Do some data analysis in an <code class="docutils literal notranslate"><span class="pre">Colab</span></code> Notebook. All figures, tables are displayed in line - no need to save sepate files.</p></li>
 <li><p>Write your report around the code in the <code class="docutils literal notranslate"><span class="pre">Colab</span></code> file. The narrative of the analysis helps the reader understand the code.</p></li>
@@ -433,81 +388,49 @@ with the conventional workflow, the bottom with the literate programming workflo
 <!-- ![comparison](../fig/literate_vs_conventional.png) -->
 <p>Of course for larger projects, you may have more than one <code class="docutils literal notranslate"><span class="pre">Colab</span></code> file and you may have separate analysis scripts as well.</p>
 </div>
-</div>
-<div class="section" id="goals-for-this-episode">
-<h2>Goals for this episode<a class="headerlink" href="#goals-for-this-episode" title="Permalink to this headline">¶</a></h2>
-<p>This episode will familiarise you with all the main features of working with either <code class="docutils literal notranslate"><span class="pre">Jupyter</span> <span class="pre">Lab</span></code> or <code class="docutils literal notranslate"><span class="pre">Colab</span></code>.
-We will be demonstrating the following features:</p>
+<div class="section" id="goals-for-this-notebook">
+<h2>Goals for this notebook<a class="headerlink" href="#goals-for-this-notebook" title="Permalink to this headline">¶</a></h2>
+<p>This notebook will familiarise you with all the main features of working with Jupyter Notebooks or Google Colab.</p>
+<p>We will be demonstrating the following features:</p>
 <ol class="simple">
-<li><p>Organising analysis into <code class="docutils literal notranslate"><span class="pre">Notebooks</span></code>;</p></li>
-<li><p>Tools for writing and running Python code;</p></li>
+<li><p>Setting up a notebook on Google Colab</p></li>
+<li><p>Exporting this notebook as a PDF file</p></li>
 </ol>
 </div>
 </div>
 <div class="section" id="notebooks-depend-on-kernels">
 <h1>Notebooks depend on kernels<a class="headerlink" href="#notebooks-depend-on-kernels" title="Permalink to this headline">¶</a></h1>
-<p>If you’re using Jupyter Lab locally or from a host provider, kernels are a big issue because it allows you to use the same notebook infrastructure across different programming languages (e.g. R, Python, Bash, Javascript etc).
-At the moment, Colab does not support these capabilities and only supports Python.</p>
+<p>If you’re using Jupyter Lab locally or from a host provider, kernels are a big issue because it allows you to use the same notebook infrastructure across different programming languages (e.g. R, Python, Bash, Javascript etc).</p>
+<p>At the moment, Colab does not support these capabilities and only supports Python, but it’s useful to know.</p>
 </div>
 <div class="section" id="analysis-is-contained-within-notebooks">
 <h1>Analysis is contained within notebooks<a class="headerlink" href="#analysis-is-contained-within-notebooks" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">notebook</span></code> keeps track of settings tied to a particular data analysis project. <br>
-A <code class="docutils literal notranslate"><span class="pre">notebook</span></code> consists of a list of cells containing either explanatory text or executable code with its output. <br>
-A folder hierarchy is common when starting a new project, which contains all the relevant data for others to replicate your work.<br>
-When creating notebooks, it is good practice to use consistent naming conventions so that different information can be included, such as the topic of analysis, the date of creation, and the notebook creator.<br>
-You can keep working on your project by just opening up the relevant Jupyter notebook in the corresponding Folder.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">notebook</span></code> keeps track of settings tied to a particular data analysis project. It consists of a list of cells containing either explanatory text or executable code with its output.</p>
+<p>A folder hierarchy is common when starting a new project, which contains all the relevant data for others to replicate your work.</p>
+<p>When creating notebooks, it is good practice to use consistent naming conventions so that different information can be included, such as the topic of analysis, the date of creation, and the notebook creator.</p>
+<p>You can keep working on your project by just opening up the relevant Jupyter notebook in the corresponding folder.</p>
 <div class="section" id="setting-up-a-new-python-project-using-colab">
 <h2>Setting up a new <code class="docutils literal notranslate"><span class="pre">Python</span></code> project using <code class="docutils literal notranslate"><span class="pre">Colab</span></code><a class="headerlink" href="#setting-up-a-new-python-project-using-colab" title="Permalink to this headline">¶</a></h2>
-<p>For your first project please complete the exercise below.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://www.oasis-brains.org/pdf/oasis_longitudinal.csv&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="create-a-new-colab-notebook">
-<h2>Create a new <code class="docutils literal notranslate"><span class="pre">Colab</span></code> notebook<a class="headerlink" href="#create-a-new-colab-notebook" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Just click <a class="reference external" href="https://colab.research.google.com/#create=true">here</a> to spawn a new Jupyter notebook in Colab</p></li>
-<li><p>Change the notebook name at the top to <code class="docutils literal notranslate"><span class="pre">oasis.ipynb</span></code></p></li>
-<li><p>Add the following code to upload the packages we will be using today</p></li>
+<li><p>Change the notebook name at the top to e.g. <code class="docutils literal notranslate"><span class="pre">oasis.ipynb</span></code></p></li>
+<li><p>Then you are ready for the main <a class="reference external" href="https://demon-network.github.io/markdown-workshop/python_exercise.html">exercise</a>!</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
-    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-    <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</pre></div>
-</div>
-<ol class="simple">
-<li><p>Download the dataset we will be working by entering the following code in the top cell</p></li>
-</ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://www.oasis-brains.org/pdf/oasis_longitudinal.csv&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
+<p>Before diving into that, we need to make sure that the we can export the PDF properly.</p>
 </div>
 <div class="section" id="working-on-a-specific-folder-in-drive">
 <h2>Working on a specific folder in drive<a class="headerlink" href="#working-on-a-specific-folder-in-drive" title="Permalink to this headline">¶</a></h2>
-<p>The following step is technically not necessary if you intend to use Colab right away. <br>
-However, since Colab is storing its work on your hard drive, it would be a good idea to specify which folder it will be using. <br>
-You would create a folder in your drive and then use the new button to spawn the Colab notebook inside that folder.<br></p>
-<p>Mount your drive in the Colab container.
-The following code can also be used to mount your entire drive so it is accessible from your notebook (this requires a gmail account and your approval).</p>
+<p>The following step is technically not necessary if you intend to just use Colab right away as a normal Jupyter notebook.</p>
+<p>However, since Colab is storing its work on your hard drive, it would be a good idea to specify which folder it will be using.</p>
+<p>We will create a folder in your drive and then move our new Colab notebook inside that folder.</p>
+<p>First, mount your drive in the Colab container.</p>
+<p>The following code can also be used to mount your entire drive so it is accessible from your notebook (this requires a gmail account and your approval):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+
 <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/gdrive&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Let’s run it ourselves:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -523,10 +446,10 @@ The following code can also be used to mount your entire drive so it is accessib
 </div>
 </div>
 <div class="section" id="use-ipython-magic-commands">
-<h2>Use Ipython magic commands<a class="headerlink" href="#use-ipython-magic-commands" title="Permalink to this headline">¶</a></h2>
+<h2>Use IPython magic commands<a class="headerlink" href="#use-ipython-magic-commands" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Magic commands (initiated with <em>%%</em>) in a notebook can be used to accomplish a variety of tasks.</p></li>
-<li><p>In this example, a shell cell will create a folder on our local Google drive and move our new Colab  notebook into it.</p></li>
+<li><p>Magic commands (initiated with <code class="docutils literal notranslate"><span class="pre">%%</span></code>) in a notebook can be used to accomplish a variety of tasks.</p></li>
+<li><p>In this example, a shell cell will create a folder on our local Google Drive and move our new Colab notebook into it.</p></li>
 <li><p>You can learn more about magic commands by visiting <a class="reference external" href="https://colab.research.google.com/github/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/01.03-Magic-Commands.ipynb">link</a></p></li>
 </ul>
 <div class="cell docutils container">
@@ -541,23 +464,17 @@ ls gdrive/MyDrive/DEMON/
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>oasis.ipynb
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Reproducible_Reporting.ipynb
+Reproducible_Reporting.pdf
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="save-the-data-in-the-newly-created-folder">
-<h2>Save the data in the newly created folder<a class="headerlink" href="#save-the-data-in-the-newly-created-folder" title="Permalink to this headline">¶</a></h2>
-<p>Once we have a local folder mounted in our virtual session we should also save the data.</p>
-<p>We start by changing our current working directory using the <code class="docutils literal notranslate"><span class="pre">%cd</span></code> magic command.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">cd</span> <span class="n">gdrive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">DEMON</span><span class="o">/</span>
-</pre></div>
-</div>
-<p>Then we will use the <code class="docutils literal notranslate"><span class="pre">to_csv</span></code> method to save the data localy</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;oasis_raw.csv&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
+<div class="section" id="saving-the-oasis-data">
+<h2>Saving the OASIS Data<a class="headerlink" href="#saving-the-oasis-data" title="Permalink to this headline">¶</a></h2>
+<p>Once we have a local folder mounted in our virtual session we can save the data that we’ll be using.</p>
+<p>To do this, we start by changing our current working directory using the <code class="docutils literal notranslate"><span class="pre">%cd</span></code> magic command.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> gdrive/MyDrive/DEMON/
@@ -570,9 +487,13 @@ ls gdrive/MyDrive/DEMON/
 </div>
 </div>
 </div>
+<p>Then we’ll load the data into memory in this notebook, and then use <code class="docutils literal notranslate"><span class="pre">to_csv()</span></code> to save it to the current working directory.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;oasis_raw.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://www.oasis-brains.org/pdf/oasis_longitudinal.csv&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;oasis_raw.csv&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -583,33 +504,20 @@ ls gdrive/MyDrive/DEMON/
 <p>Among the advantages of a notebook is the ability to pick up an analysis from where you left off last time.
 These include the notebook kernel, variables made, packages imported, and commands executed.</p>
 <p>Let’s investigate this with the following two exercises:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-0.08409464, -0.52748811,  0.22402034,  1.91797563,  1.39013786,
-       -0.54965253,  0.71944841,  0.76520252, -1.16918544,  1.05141679])
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 <div class="section" id="starting-where-you-left-off">
-<h2>Starting where you left off<a class="headerlink" href="#starting-where-you-left-off" title="Permalink to this headline">¶</a></h2>
+<h3>Starting where you left off<a class="headerlink" href="#starting-where-you-left-off" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Go to your open notebook</p></li>
 <li><p>Ensure the top cell has all the packages you need available.</p></li>
 <li><p>Press the play button to launch the cell (or press shift+enter).</p></li>
 <li><p>Add the following to the empty cell below (or just copy and paste!):</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># Sample a vector of 10 numbers from the normal distribution</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span> 
-    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-      <span class="n">total</span> <span class="o">+=</span> <span class="n">value</span>
-    <span class="n">total</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># Sample a vector of 10 numbers from the normal distribution</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">value</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
 </pre></div>
 </div>
 <ol class="simple">
@@ -619,37 +527,48 @@ These include the notebook kernel, variables made, packages imported, and comman
 <li><p>Type <code class="docutils literal notranslate"><span class="pre">x</span></code> or <code class="docutils literal notranslate"><span class="pre">total</span></code> in a cell and run it - these should be recognised by the <code class="docutils literal notranslate"><span class="pre">Colab</span></code> interpreter and have the same value as before.</p></li>
 </ol>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 0.15872969, -0.25680134, -0.1102667 ,  0.56692093,  0.1241041 ,
+        1.51965837,  1.62610112, -0.92023229, -1.51431169,  0.36782038])
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="colab-is-memoryless">
-<h2>Colab is memoryless<a class="headerlink" href="#colab-is-memoryless" title="Permalink to this headline">¶</a></h2>
+<h3>Colab is memoryless<a class="headerlink" href="#colab-is-memoryless" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Importantly this only works as long as the notebook is on, i.e. the variables are stored in runtime memory.</p></li>
-<li><p>To emphasise this important issue let’s do another exercise</p></li>
+<li><p>To emphasise this important issue, let’s do another exercise</p></li>
 <li><p>In your colab tab open the Runtime menu and select <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">runtime</span></code></p></li>
 <li><p>Now rerun the cell which will now raise an error</p></li>
 <li><p>This is because the variables are no longer in memory.</p></li>
 <li><p>Furthermore if you open the Runtime menu and select <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">all</span></code> you will see that the results change</p></li>
-<li><p>This is because we are sampling random numbers from a different Generator instance (you can read more about this <a class="reference external" href="https://numpy.org/doc/stable/reference/random/generator.html">here</a></p></li>
-<li><p>For this problem, a better solution would be to construct a new Generator with 42 as a SeedSequence making sure that the sampling is identical</p></li>
+<li><p>This is because we are sampling random numbers from a different Generator instance (you can read more about this <a class="reference external" href="https://numpy.org/doc/stable/reference/random/generator.html">here</a>)</p></li>
 <li><p>See the following code:</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> 
-    <span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> 
-    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span> 
-    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-      <span class="n">total</span> <span class="o">+=</span> <span class="n">value</span>
-    <span class="n">total</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span> 
+<span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span> 
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">value</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="section" id="now-if-you-reset-your-runtime-the-results-will-be-the-same-every-time">
-<h3>Now if you reset your runtime the results will be the same every time<a class="headerlink" href="#now-if-you-reset-your-runtime-the-results-will-be-the-same-every-time" title="Permalink to this headline">¶</a></h3>
 </div>
+<p><strong>Now if you reset your runtime the results will be the same every time</strong></p>
 </div>
 <div class="section" id="generate-pdf-reports-from-a-notebook">
-<h2>Generate pdf reports from a notebook<a class="headerlink" href="#generate-pdf-reports-from-a-notebook" title="Permalink to this headline">¶</a></h2>
+<h2>Generate PDF reports from a notebook<a class="headerlink" href="#generate-pdf-reports-from-a-notebook" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>One of the goals of this session is to show how you can export your notebook to a PDF report</p></li>
+<li><p>One of the goals of this session was to show how you can export your notebook to a PDF report</p></li>
 <li><p>To do this, you need to install some essential software on your virtual machine</p></li>
-<li><p>We will use the <code class="docutils literal notranslate"><span class="pre">%%capture</span></code> magic command to supress the cell output</p></li>
+<li><p>We will use the <code class="docutils literal notranslate"><span class="pre">%%capture</span></code> magic command to supress the cell output (it’s a lot!)</p></li>
 <li><p>And use the <code class="docutils literal notranslate"><span class="pre">!</span></code> symbol to run bash line without the need to declare a bash cell</p></li>
 </ul>
 <div class="cell docutils container">
@@ -662,8 +581,9 @@ These include the notebook kernel, variables made, packages imported, and comman
 </div>
 </div>
 </div>
-<div class="section" id="now-you-have-the-ability-to-export-your-notebook-as-a-pdf-report">
-<h2>Now you have the ability to export your notebook as a pdf report<a class="headerlink" href="#now-you-have-the-ability-to-export-your-notebook-as-a-pdf-report" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="export-your-notebook-as-a-pdf-report">
+<h2>Export your notebook as a PDF report<a class="headerlink" href="#export-your-notebook-as-a-pdf-report" title="Permalink to this headline">¶</a></h2>
+<p>Below we will convert a notebook named <code class="docutils literal notranslate"><span class="pre">oasis.ipynb</span></code> (that we made earlier) to a PDF:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>jupyter nbconvert oasis.ipynb --to pdf --output oasis.pdf
@@ -672,13 +592,21 @@ These include the notebook kernel, variables made, packages imported, and comman
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[NbConvertApp] Converting notebook oasis.ipynb to pdf
-[NbConvertApp] Writing 39023 bytes to ./notebook.tex
+[NbConvertApp] Support files will be in oasis_files/
+[NbConvertApp] Making directory ./oasis_files
+[NbConvertApp] Making directory ./oasis_files
+[NbConvertApp] Making directory ./oasis_files
+[NbConvertApp] Making directory ./oasis_files
+[NbConvertApp] Making directory ./oasis_files
+[NbConvertApp] Making directory ./oasis_files
+[NbConvertApp] Making directory ./oasis_files
+[NbConvertApp] Writing 59602 bytes to ./notebook.tex
 [NbConvertApp] Building PDF
 [NbConvertApp] Running xelatex 3 times: [u&#39;xelatex&#39;, u&#39;./notebook.tex&#39;, &#39;-quiet&#39;]
 [NbConvertApp] Running bibtex 1 time: [u&#39;bibtex&#39;, u&#39;./notebook&#39;]
 [NbConvertApp] WARNING | bibtex had problems, most likely because there were no citations
 [NbConvertApp] PDF successfully created
-[NbConvertApp] Writing 50427 bytes to oasis.pdf
+[NbConvertApp] Writing 344981 bytes to oasis.pdf
 </pre></div>
 </div>
 </div>
@@ -711,8 +639,8 @@ These include the notebook kernel, variables made, packages imported, and comman
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="R_analysis.html" title="previous page">R Worksheet</a>
-    <a class='right-next' id="next-link" href="python_exercise.html" title="next page">Exercise</a>
+    <a class='left-prev' id="prev-link" href="R_exercise.html" title="previous page">R Exercise</a>
+    <a class='right-next' id="next-link" href="python_exercise.html" title="next page">Python Exercise</a>
 
         </div>
         

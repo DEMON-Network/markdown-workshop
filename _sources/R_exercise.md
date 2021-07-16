@@ -1,4 +1,4 @@
-# Exercise
+# R Exercise
 
 > ## Reproduce and extend an analysis. 
 > A small piece of exploratory analysis was done on the `oasis` dataset. While it was done in `RMarkdown` only the a html document is available. You want to reproduce and update this analysis. 
@@ -9,5 +9,4 @@
 > ## Advanced task
 > 2. View the advanced html report by right clicking on `R Worksheet Advanced` in the left hand menu, opening the link in a new tab.
 > 2. Adapt your RMarkdown document so that your report includes the additional features in the advanced report
-
 
