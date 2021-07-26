@@ -15,6 +15,7 @@ This workshop is a collaboration between the [DEMON Network](https://demondement
 - Dr Eyal Soreq
 - Dr Cameron Shand
 - Ms Meta B&ouml;nniger
+- Dr Charlotte James
 
 ## Speakers
 
@@ -31,9 +32,12 @@ This workshop is a collaboration between the [DEMON Network](https://demondement
 - Ms Meta B&ouml;nniger
 - Mr Brian Schilder
 - Prof Mark Kelson
+- Dr Daniel Padfield
+- Mr Mateus Harrington
 
 ### Python
 
 - Dr Charlotte James
 - Dr Cameron Shand
 - Ms Becki Green
+- Dr Thomas Liebmann
