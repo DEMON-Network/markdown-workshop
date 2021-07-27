@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Load packages
 ```{r load packages, message=FALSE}
-list.of.packages <- c("patchwork", "ggpubr", "tidyverse", "data.table", "knitr", "markdown", "rmarkdown", "dplyr", "ggplot2", "moments", "car")
+list.of.packages <- c("patchwork", "ggpubr", "tidyverse", "data.table", "knitr", "markdown", "rmarkdown", "dplyr", "ggplot2", "moments", "car", "tableone")
 
 # install packages if new
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
@@ -45,7 +45,7 @@ A full explanation of the data can be found in:
 df <- read.csv("http://www.oasis-brains.org/pdf/oasis_longitudinal.csv") 
 
 # print out top 5 rows of the DataFrame
-kable(head(df, n = 5L))
+kable(head(df, n = 5L)) #if the package kable is not found change it to knitr::kable
 ```
 
 ## Pre-processing the Data
